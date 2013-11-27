@@ -21,6 +21,18 @@ public class DfmParser implements DfmParserConstants {
   final public DfmObject parse() throws ParseException, ParseException {
     DfmObject res;
     res = dfmObject();
+    label_1:
+    while (true) {
+      switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+      case ENDLINE:
+        ;
+        break;
+      default:
+        jj_la1[0] = jj_gen;
+        break label_1;
+      }
+      jj_consume_token(ENDLINE);
+    }
     jj_consume_token(0);
       {if (true) return res;}
     throw new Error("Missing return statement in function");
@@ -39,7 +51,7 @@ public class DfmParser implements DfmParserConstants {
     type = type();
                       res.setType( type );
     jj_consume_token(ENDLINE);
-    label_1:
+    label_2:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
       case OBJECT:
@@ -52,7 +64,7 @@ public class DfmParser implements DfmParserConstants {
                                    res.addProperty(prop);
         break;
       default:
-        jj_la1[0] = jj_gen;
+        jj_la1[1] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -62,8 +74,8 @@ public class DfmParser implements DfmParserConstants {
         ;
         break;
       default:
-        jj_la1[1] = jj_gen;
-        break label_1;
+        jj_la1[2] = jj_gen;
+        break label_2;
       }
     }
     jj_consume_token(END);
@@ -92,7 +104,7 @@ public class DfmParser implements DfmParserConstants {
     tStr = identifier();
         res.setName( tStr );
     jj_consume_token(EQUAL);
-    label_2:
+    label_3:
     while (true) {
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
       case STRING_SQ:
@@ -106,7 +118,7 @@ public class DfmParser implements DfmParserConstants {
                              res.setValue ( tStr );
         break;
       default:
-        jj_la1[2] = jj_gen;
+        jj_la1[3] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
@@ -118,8 +130,8 @@ public class DfmParser implements DfmParserConstants {
         ;
         break;
       default:
-        jj_la1[3] = jj_gen;
-        break label_2;
+        jj_la1[4] = jj_gen;
+        break label_3;
       }
     }
     jj_consume_token(ENDLINE);
@@ -144,14 +156,14 @@ public class DfmParser implements DfmParserConstants {
         tStr = jj_consume_token(KW_BRACKETS);
         break;
       default:
-        jj_la1[4] = jj_gen;
+        jj_la1[5] = jj_gen;
         jj_consume_token(-1);
         throw new ParseException();
       }
                                                                               res = tStr.image;
       break;
     default:
-      jj_la1[5] = jj_gen;
+      jj_la1[6] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -168,13 +180,13 @@ public class DfmParser implements DfmParserConstants {
   public Token jj_nt;
   private int jj_ntk;
   private int jj_gen;
-  final private int[] jj_la1 = new int[6];
+  final private int[] jj_la1 = new int[7];
   static private int[] jj_la1_0;
   static {
       jj_la1_init_0();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x21000,0x21000,0x20490,0x20490,0x480,0x20480,};
+      jj_la1_0 = new int[] {0x8000,0x21000,0x21000,0x20490,0x20490,0x480,0x20480,};
    }
 
   /** Constructor with InputStream. */
@@ -188,7 +200,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -202,7 +214,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -212,7 +224,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -222,7 +234,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -231,7 +243,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -240,7 +252,7 @@ public class DfmParser implements DfmParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 6; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 7; i++) jj_la1[i] = -1;
   }
 
   private Token jj_consume_token(int kind) throws ParseException {
@@ -296,7 +308,7 @@ public class DfmParser implements DfmParserConstants {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
     }
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 7; i++) {
       if (jj_la1[i] == jj_gen) {
         for (int j = 0; j < 32; j++) {
           if ((jj_la1_0[i] & (1<<j)) != 0) {

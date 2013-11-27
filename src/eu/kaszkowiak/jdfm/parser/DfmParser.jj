@@ -74,6 +74,7 @@ DfmObject parse() throws ParseException:
 }
 {
     res=dfmObject()
+    ( <ENDLINE> )*
     <EOF>      
     { return res; }
 }
