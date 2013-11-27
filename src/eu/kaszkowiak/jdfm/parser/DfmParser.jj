@@ -1,0 +1,155 @@
+options {
+  JAVA_UNICODE_ESCAPE = true;
+  ERROR_REPORTING = true;
+  STATIC = false;
+  JDK_VERSION = "1.5";
+  BUILD_PARSER = true;
+  IGNORE_CASE = true;
+}
+
+PARSER_BEGIN(DfmParser)
+
+package eu.kaszkowiak.jdfm.parser;
+
+import java.io.Reader;
+import java.io.StringReader;
+import eu.kaszkowiak.jdfm.model.*;
+
+public class DfmParser {
+
+     public DfmParser(String source) {
+        this((Reader)(new StringReader(source))); 
+    }  
+}
+PARSER_END(DfmParser)
+
+MORE : { < "'" >  : IN_STRING_SQ }
+<IN_STRING_SQ> MORE : { < "\\" ["'", "\\"] >  }
+<IN_STRING_SQ> MORE : { < ~["'"] >  }
+<IN_STRING_SQ> TOKEN : { < STRING_SQ : "'" >  : DEFAULT }
+
+MORE : { < "(" >  : IN_BRACKETS }
+<IN_BRACKETS> MORE : { < ~[")"] >  }
+<IN_BRACKETS> TOKEN : { < BRACKETS : ")" >  : DEFAULT }
+
+
+MORE : { < "[" >  : IN_KW_BRACKETS }
+<IN_KW_BRACKETS> MORE : { < ~["]"] >  }
+<IN_KW_BRACKETS> TOKEN : { < KW_BRACKETS : "]" >  : DEFAULT }
+
+
+
+SKIP :
+{
+    <WHITESPACE :  ([" ", "\t"])+>
+}
+
+TOKEN: 
+{
+        <OBJECT: "object">
+    |   <END: "end">
+    |   <COLON: ":">
+    |   <ENDLINE: (["\r", "\n"])+>
+    |   <EQUAL: "=">
+}
+
+TOKEN:
+{
+    <IDENTIFIER : (["A"-"Z", "0"-"9", "a"-"z", "_", ".", "-", "#"])+ >
+}
+    
+
+private String string() :
+{
+  Token tStr;
+}
+{
+  tStr =<STRING_SQ> { return tStr.image; }
+}
+
+
+DfmObject parse() throws ParseException:
+{
+    DfmObject res;
+}
+{
+    res=dfmObject()
+    <EOF>      
+    { return res; }
+}
+
+
+
+private DfmObject dfmObject() throws ParseException:
+{
+    DfmObject res = new DfmObject();
+    DfmProperty prop;
+    DfmObject obj;
+    String name;
+    String type;
+}
+{
+    <OBJECT> 
+        name=identifier() { res.setName( name ); }
+        <COLON> 
+        type=type() { res.setType( type ); }
+    <ENDLINE>
+        (     (obj=dfmObject()   { res.addChild(obj);     } <ENDLINE>)
+            | (( prop=property() { res.addProperty(prop); }) )
+        )+
+    <END> 
+    { return res; }
+}
+
+private String identifier() throws ParseException:
+{
+    Token tStr;
+}
+{
+    tStr = <IDENTIFIER> 
+    { 
+        return tStr.image;
+    }
+    
+}
+
+private String type() throws ParseException:
+{
+    Token tStr;
+}
+{
+    tStr = <IDENTIFIER> 
+    { 
+        return tStr.image;
+    }
+    
+}
+
+private DfmProperty property() throws ParseException:
+{
+    String tStr;
+    DfmProperty res = new DfmProperty();
+    String value;
+}
+{
+    tStr = identifier() 
+    { 
+        res.setName( tStr );
+    }
+    <EQUAL> 
+    (  (value = string() { res.setValue ( value ); })
+     | (tStr = propValue() { res.setValue ( tStr ); })
+    )+
+    <ENDLINE>
+    { return res; }
+}
+
+private String propValue() throws ParseException:
+{
+    String res;
+    Token tStr;
+}
+{
+    (( res = identifier() ) |  ((tStr = <BRACKETS>) | (tStr = <KW_BRACKETS>)){res = tStr.image;})
+    {return res;}
+}
