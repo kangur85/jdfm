@@ -43,11 +43,6 @@ public class DfmObjectTest {
     public static void setUpClass() {
     }
 
-
-    /**
-     *
-     * @throws Exception
-     */
     @Test
     public void testToStringCorrect() throws Exception {
         String expectedResult = DfmMockStringFactory.getDfmStringCorrect();
@@ -64,18 +59,6 @@ public class DfmObjectTest {
         Assert.assertEquals(result.toString(), expectedResult);
     }
     
-    @Test
-    public void testToStringCorrectGlyphData() throws Exception {
-        String expectedResult = DfmMockStringFactory.getDfmWithGlyphData();
-        DfmParser parser = new DfmParser(expectedResult);
-        DfmObject result = parser.parse();
-        Assert.assertEquals(result.toString(), expectedResult);
-    }    
-    
-    /**
-     *
-     * @throws Exception
-     */
     @Test(expected = ParseException.class)
     public void testToStringIncomplete() throws Exception {
         String expectedResult = DfmMockStringFactory.getDfmStringIncomplete();
@@ -91,4 +74,12 @@ public class DfmObjectTest {
         DfmObject result = parser.parse();
         Assert.assertEquals(result.toString(), expectedResult);
     }
+    
+    @Test
+    public void testToStringCorrectGlyphDataLongFile() throws Exception {
+        String expectedResult = DfmMockStringFactory.getComplexDfmWithGlyphAndItems();
+        DfmParser parser = new DfmParser(expectedResult);
+        DfmObject result = parser.parse();
+        Assert.assertEquals(result.toString(), expectedResult);
+    }    
 }

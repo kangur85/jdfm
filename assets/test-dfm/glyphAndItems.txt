@@ -1,0 +1,2276 @@
+object frmDesigned_6: TfrmDesigned
+  Left = 112
+  Top = 85
+  Width = 800
+  Height = 598
+  Cursor = crArrow
+  VertScrollBar.ParentColor = False
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnResize = FormResize
+  OnShow = FormShow
+  Caption = #1058#1072#1073#1083#1048#1089#1090#1080#1085#1085#1086#1089#1090#1080#1060'11'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OnDragOver = FormDragOver
+  _LongName = #1058#1072#1073#1083#1080#1094#1072' '#1080#1089#1090#1080#1085#1086#1089#1090#1080' '#1060' 1-1 (06.05.03)'
+  _FormCodeName = 'F122620425'
+  _AttribsInfo = <
+    item
+      ID = '0000020003089373'
+      LongName = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074#1086' '#1074#1093#1086#1076#1103#1097#1077#1081' '#1082#1072#1088#1090#1086#1095#1082#1077
+      ShortName = 'ENTER'
+      CodeName = 'TTTF11MVD#ENTER'
+      IsNull = False
+      RefClassName = 'SL41'
+      RefClassType = 'D'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <>
+      TypeInfo.Name = 'REFERENCE'
+      TypeInfo.TypeID = dtAny
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 16
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089374'
+      LongName = #1054#1090#1089#1091#1090#1089#1090#1074#1080#1077' '#1076#1074#1080#1078#1077#1085#1080#1103' '#1087#1086' '#1059#1044
+      ShortName = 'NOTMOVE'
+      CodeName = 'TTTF11MVD#NOTMOVE'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <>
+      TypeInfo.Name = 'BOOLEAN'
+      TypeInfo.TypeID = dtBoolean
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 1
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089375'
+      LongName = #1042' '#1073#1072#1079#1077' -> '#1060'11 -> '#1060'11'
+      ShortName = 'STATEF11F11'
+      CodeName = 'TTTF11MVD#STATEF11F11'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <>
+      TypeInfo.Name = 'BOOLEAN'
+      TypeInfo.TypeID = dtBoolean
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 1
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089420'
+      LongName = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1088#1077#1076#1099#1076#1091#1097#1077#1081' '#1060'11'
+      ShortName = 'N1F11F11'
+      CodeName = 'TTTF11MVD#N1F11F11'
+      RefClassName = 'MGRDECIS'
+      RefClassType = 'G'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <
+        item
+          ID = '0000020000131872'
+          LongName = 'MGRDECIS'
+          CodeName = 'DECISION'
+          RefClassName = 'SL41'
+          RefClassType = 'D'
+          ParentTypeInfo.Name = 'VARCHAR2'
+          ParentTypeInfo.TypeID = dtAny
+          ParentTypeInfo.CompType = atNone
+          ParentTypeInfo.Length = 1
+          ParentTypeInfo.Decimal = 0
+          ParentTypeInfo.Language = All
+          Attributes = <>
+          TypeInfo.Name = 'REFERENCE'
+          TypeInfo.TypeID = dtAny
+          TypeInfo.CompType = atNone
+          TypeInfo.Length = 16
+          TypeInfo.Decimal = 0
+          TypeInfo.Language = All
+          Show = False
+          IndexComp = 0
+        end>
+      TypeInfo.Name = 'MULTIGROUP'
+      TypeInfo.TypeID = dtAny
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 16
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089421'
+      LongName = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+      ShortName = 'N2F11F11'
+      CodeName = 'TTTF11MVD#N2F11F11'
+      RefClassName = 'MGRDECIS'
+      RefClassType = 'G'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <
+        item
+          ID = '0000020000131872'
+          LongName = 'MGRDECIS'
+          CodeName = 'DECISION'
+          RefClassName = 'SL41'
+          RefClassType = 'D'
+          ParentTypeInfo.Name = 'VARCHAR2'
+          ParentTypeInfo.TypeID = dtAny
+          ParentTypeInfo.CompType = atNone
+          ParentTypeInfo.Length = 1
+          ParentTypeInfo.Decimal = 0
+          ParentTypeInfo.Language = All
+          Attributes = <>
+          TypeInfo.Name = 'REFERENCE'
+          TypeInfo.TypeID = dtAny
+          TypeInfo.CompType = atNone
+          TypeInfo.Length = 16
+          TypeInfo.Decimal = 0
+          TypeInfo.Language = All
+          Show = False
+          IndexComp = 0
+        end>
+      TypeInfo.Name = 'MULTIGROUP'
+      TypeInfo.TypeID = dtAny
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 16
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089418'
+      LongName = #1074' '#1041#1044'  -> '#1060'11 -|'
+      ShortName = 'STINPRECEDF11'
+      CodeName = 'TTTF11MVD#STINPRECEDF11'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <>
+      TypeInfo.Name = 'BOOLEAN'
+      TypeInfo.TypeID = dtBoolean
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 1
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end
+    item
+      ID = '0000020003089419'
+      LongName = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+      ShortName = 'INPRECEDF11'
+      CodeName = 'TTTF11MVD#INPRECEDF11'
+      RefClassName = 'MGRDECIS'
+      RefClassType = 'G'
+      ParentTypeInfo.Name = 'VARCHAR2'
+      ParentTypeInfo.TypeID = dtAny
+      ParentTypeInfo.CompType = atNone
+      ParentTypeInfo.Length = 1
+      ParentTypeInfo.Decimal = 0
+      ParentTypeInfo.Language = All
+      Attributes = <
+        item
+          ID = '0000020000131872'
+          LongName = 'MGRDECIS'
+          CodeName = 'DECISION'
+          RefClassName = 'SL41'
+          RefClassType = 'D'
+          ParentTypeInfo.Name = 'VARCHAR2'
+          ParentTypeInfo.TypeID = dtAny
+          ParentTypeInfo.CompType = atNone
+          ParentTypeInfo.Length = 1
+          ParentTypeInfo.Decimal = 0
+          ParentTypeInfo.Language = All
+          Attributes = <>
+          TypeInfo.Name = 'REFERENCE'
+          TypeInfo.TypeID = dtAny
+          TypeInfo.CompType = atNone
+          TypeInfo.Length = 16
+          TypeInfo.Decimal = 0
+          TypeInfo.Language = All
+          Show = False
+          IndexComp = 0
+        end>
+      TypeInfo.Name = 'MULTIGROUP'
+      TypeInfo.TypeID = dtAny
+      TypeInfo.CompType = atNone
+      TypeInfo.Length = 16
+      TypeInfo.Decimal = 0
+      TypeInfo.Language = All
+      Show = False
+      IndexComp = 0
+    end>
+  _ClassCodeName = 'TTTF11MVD'
+  _ClassType = 'RSVC'
+  _MethodCodeName = 'S3089392'
+  _CurrentLanguage = 'RUSSIAN'
+  _Version = '1.0.0.5'
+  _GradientCaption = False
+  ShowMessNotFind = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object TDSGroupBox1: TDSGroupBox
+    Left = 0
+    Top = 25
+    Width = 792
+    Height = 42
+    Align = alTop
+    Caption = #1042#1093#1086#1076#1103#1097#1072#1103' '#1082#1072#1088#1090#1086#1095#1082#1072
+    TabOrder = 1
+    ShortCut = 0
+    object DSCodeEdit1: TDSCodeEdit
+      Left = 224
+      Top = 18
+      Width = 562
+      Height = 18
+      AColor = clInfoBk
+      AutoSave = True
+      EAColor = False
+      ELangType = False
+      HotTrack = True
+      LangType = ltRusLang
+      _AttribsInfo = <>
+      _DictsAttribName = 'TTTF11MVD#ENTER'
+      _ClassName = 'SL41'
+      _MethodName = 'SHOW'
+      _CodeAttribName = 'SHORTNAME'
+      _IsDBComponent = True
+      Caption.Alignment = taLeftJustify
+      Caption.Font.Charset = DEFAULT_CHARSET
+      Caption.Font.Color = clRed
+      Caption.Font.Height = -11
+      Caption.Font.Name = 'MS Sans Serif'
+      Caption.Font.Style = []
+      Caption.Caption = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074#1086' '#1074#1093#1086#1076#1103#1097#1077#1081' '#1082#1072#1088#1090#1086#1095#1082#1077
+      Caption.Width = 213
+      Caption.Height = 13
+      Caption.Indent = 2
+      Caption.Visible = True
+      Caption.ParentFont = False
+      CodeButton.Flat = True
+      CodeButton.ShowHint = False
+      CodeButton.Glyph.Data = {
+        D6000000424DD60000000000000076000000280000000F0000000C0000000100
+        0400000000006000000000000000000000001000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+        FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFF1FFFFFFF0FFFFFF111FFF
+        FFF0FFFFF11111FFFFF0FFFF1111111FFFF0FFF111111111FFF0FFFFFFFFFFFF
+        FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0}
+      CodeButton.Width = 17
+      CodeButton.Align = balRight
+      CodeButton.Visible = True
+      CodeButton.Cursor = crHandPoint
+      CodePart.Width = 40
+      CodePart.MinSize = 40
+      CodePart.Visible = True
+      ItemIndex = -1
+      ParentFont = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentColor = False
+      DropCount = 8
+      DropWidth = 562
+      Color = clBtnFace
+      DropAlign = balRight
+      ReadOnly = False
+      TabStop = True
+      TabOrder = 0
+      Required = True
+      ActiveColor = 14811135
+      Frame = flBottom
+      ShortCut = 0
+      _MultiLanguage = <
+        item
+          Language = 'RUSSIAN'
+          Left = 224
+          Top = 18
+          Width = 562
+          Height = 18
+          Caption = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074#1086' '#1074#1093#1086#1076#1103#1097#1077#1081' '#1082#1072#1088#1090#1086#1095#1082#1077
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = []
+          CaptionFont.Charset = DEFAULT_CHARSET
+          CaptionFont.Color = clRed
+          CaptionFont.Height = -11
+          CaptionFont.Name = 'MS Sans Serif'
+          CaptionFont.Style = []
+          CaptionWidth = 213
+        end>
+      _OwnerClassCodeName = 'TTTF11MVD'
+      _OwnerMethodCodeName = 'S3089392'
+      _Duplciate = False
+      DictCash = True
+    end
+  end
+  object TDSGroupBox2: TDSGroupBox
+    Left = 0
+    Top = 67
+    Width = 792
+    Height = 485
+    Align = alClient
+    Caption = #1057#1086#1089#1090#1086#1103#1085#1080#1077' '#1082#1072#1088#1090#1086#1095#1077#1082' '#1074' '#1041#1044
+    TabOrder = 2
+    ShortCut = 0
+    object TDSPanel2: TDSPanel
+      Left = 2
+      Top = 15
+      Width = 788
+      Height = 28
+      Align = alTop
+      TabOrder = 0
+      ShortCut = 0
+      object DSLabeledCheckBox3: TDSLabeledCheckBox
+        Left = 277
+        Top = 8
+        Width = 45
+        Height = 17
+        CheckValues.OnChecked = #1044#1072
+        CheckValues.OnUnchecked = #1053#1077#1090
+        CheckValues.OnUndefined = #1053#1077#1086#1087#1088'.'
+        CheckValues.Font.Charset = DEFAULT_CHARSET
+        CheckValues.Font.Color = clWindowText
+        CheckValues.Font.Height = -11
+        CheckValues.Font.Name = 'MS Sans Serif'
+        CheckValues.Font.Style = []
+        CheckValues.Visible = False
+        Caption.Alignment = taLeftJustify
+        Caption.Font.Charset = DEFAULT_CHARSET
+        Caption.Font.Color = clWindowText
+        Caption.Font.Height = -11
+        Caption.Font.Name = 'MS Sans Serif'
+        Caption.Font.Style = []
+        Caption.Caption = #1054#1090#1089#1091#1090#1089#1090#1074#1080#1077' '#1076#1074#1080#1078#1077#1085#1080#1103' '#1087#1086' '#1059#1044
+        Caption.Width = 146
+        Caption.Height = 13
+        Caption.Visible = True
+        Caption.ParentFont = False
+        ParentFont = False
+        TabOrder = 0
+        _AttribCodeName = 'TTTF11MVD#NOTMOVE'
+        ShortCut = 0
+        _MultiLanguage = <
+          item
+            Language = 'RUSSIAN'
+            Left = 277
+            Top = 8
+            Width = 45
+            Height = 17
+            Caption = #1054#1090#1089#1091#1090#1089#1090#1074#1080#1077' '#1076#1074#1080#1078#1077#1085#1080#1103' '#1087#1086' '#1059#1044
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            CaptionFont.Charset = DEFAULT_CHARSET
+            CaptionFont.Color = clWindowText
+            CaptionFont.Height = -11
+            CaptionFont.Name = 'MS Sans Serif'
+            CaptionFont.Style = []
+            CaptionWidth = 146
+          end>
+        _OwnerClassCodeName = 'TTTF11MVD'
+        _OwnerMethodCodeName = 'S3089392'
+        _Duplciate = False
+      end
+    end
+    object TDSPageControl1: TDSPageControl
+      Left = 2
+      Top = 100
+      Width = 788
+      Height = 383
+      ActivePage = DSTabSheet1
+      Align = alClient
+      TabIndex = 0
+      TabOrder = 1
+      ActivePageIndex = 0
+      PagesCount = 2
+      object DSTabSheet1: TDSTabSheet
+        Caption = 
+          '                       '#1042' '#1073#1072#1079#1077'  '#1090#1086#1083#1100#1082#1086' '#1086#1076#1085#1072'     '#1060'1.1  - |        ' +
+          '                             '
+        ShortCut = 0
+        object DSSimpleMultiGroup1: TDSSimpleMultiGroup
+          Left = 0
+          Top = 0
+          Width = 780
+          Height = 355
+          _AttribsInfo = <
+            item
+              ID = '0000020000131872'
+              LongName = 'MGRDECIS'
+              CodeName = 'DECISION'
+              RefClassName = 'SL41'
+              RefClassType = 'D'
+              ParentTypeInfo.Name = 'VARCHAR2'
+              ParentTypeInfo.TypeID = dtAny
+              ParentTypeInfo.CompType = atNone
+              ParentTypeInfo.Length = 1
+              ParentTypeInfo.Decimal = 0
+              ParentTypeInfo.Language = All
+              ShowAttribute = True
+              Attributes = <>
+              TypeInfo.Name = 'REFERENCE'
+              TypeInfo.TypeID = dtAny
+              TypeInfo.CompType = atNone
+              TypeInfo.Length = 16
+              TypeInfo.Decimal = 0
+              TypeInfo.Language = All
+              Show = False
+              IndexComp = 0
+            end>
+          _AttribCodeName = 'TTTF11MVD#INPRECEDF11'
+          _ClassCodeName = 'MGRDECIS'
+          _MethodCodeName = 'SHOW'
+          Caption.Alignment = taLeftJustify
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = clWindowText
+          Caption.Font.Height = -11
+          Caption.Font.Name = 'MS Sans Serif'
+          Caption.Font.Style = []
+          Caption.Caption = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+          Caption.Width = 137
+          Caption.Height = 13
+          Caption.Visible = True
+          Caption.ParentFont = False
+          ExpandedWidth = 0
+          Align = alClient
+          CodeWidth = 0
+          TextWidth = 0
+          TitleHeight = 17
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          ButtonWidth = 20
+          _MultiLanguage = <
+            item
+              Language = 'RUSSIAN'
+              Left = 0
+              Top = 0
+              Width = 780
+              Height = 355
+              Caption = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              CaptionFont.Charset = DEFAULT_CHARSET
+              CaptionFont.Color = clWindowText
+              CaptionFont.Height = -11
+              CaptionFont.Name = 'MS Sans Serif'
+              CaptionFont.Style = []
+              CaptionWidth = 137
+            end>
+          TabOrder = 0
+          TabStop = False
+          _OwnerClassCodeName = 'TTTF11MVD'
+          _OwnerMethodCodeName = 'S3089392'
+          _Duplciate = False
+        end
+      end
+      object DSTabSheet3: TDSTabSheet
+        Caption = 
+          '                        '#1042' '#1073#1072#1079#1077'      -> '#1060'1.1 -> '#1060'1.1 ->          ' +
+          '                 '
+        ShortCut = 0
+        object DSSimpleMultiGroup2: TDSSimpleMultiGroup
+          Left = 0
+          Top = 15
+          Width = 780
+          Height = 158
+          _AttribsInfo = <
+            item
+              ID = '0000020000131872'
+              LongName = 'MGRDECIS'
+              CodeName = 'DECISION'
+              RefClassName = 'SL41'
+              RefClassType = 'D'
+              ParentTypeInfo.Name = 'VARCHAR2'
+              ParentTypeInfo.TypeID = dtAny
+              ParentTypeInfo.CompType = atNone
+              ParentTypeInfo.Length = 1
+              ParentTypeInfo.Decimal = 0
+              ParentTypeInfo.Language = All
+              ShowAttribute = True
+              Attributes = <>
+              TypeInfo.Name = 'REFERENCE'
+              TypeInfo.TypeID = dtAny
+              TypeInfo.CompType = atNone
+              TypeInfo.Length = 16
+              TypeInfo.Decimal = 0
+              TypeInfo.Language = All
+              Show = False
+              IndexComp = 0
+            end>
+          _AttribCodeName = 'TTTF11MVD#N1F11F11'
+          _ClassCodeName = 'MGRDECIS'
+          _MethodCodeName = 'SHOW'
+          Caption.Alignment = taCenter
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = clWindowText
+          Caption.Font.Height = -11
+          Caption.Font.Name = 'MS Sans Serif'
+          Caption.Font.Style = []
+          Caption.Caption = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1088#1077#1076#1099#1076#1091#1097#1077#1081' '#1060'11'
+          Caption.Width = 198
+          Caption.Height = 13
+          Caption.Position = lpTop
+          Caption.Indent = 0
+          Caption.Visible = True
+          Caption.ParentFont = False
+          ExpandedWidth = 0
+          CodeWidth = 0
+          TextWidth = 0
+          TitleHeight = 17
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          ButtonWidth = 20
+          _MultiLanguage = <
+            item
+              Language = 'RUSSIAN'
+              Left = 0
+              Top = 15
+              Width = 780
+              Height = 158
+              Caption = #1055#1088#1080#1085#1103#1090#1086#1077' '#1088#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1088#1077#1076#1099#1076#1091#1097#1077#1081' '#1060'11'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              CaptionFont.Charset = DEFAULT_CHARSET
+              CaptionFont.Color = clWindowText
+              CaptionFont.Height = -11
+              CaptionFont.Name = 'MS Sans Serif'
+              CaptionFont.Style = []
+              CaptionWidth = 198
+            end>
+          TabOrder = 0
+          TabStop = False
+          _OwnerClassCodeName = 'TTTF11MVD'
+          _OwnerMethodCodeName = 'S3089392'
+          _Duplciate = False
+        end
+        object DSSimpleMultiGroup3: TDSSimpleMultiGroup
+          Left = 0
+          Top = 197
+          Width = 780
+          Height = 158
+          _AttribsInfo = <
+            item
+              ID = '0000020000131872'
+              LongName = 'MGRDECIS'
+              CodeName = 'DECISION'
+              RefClassName = 'SL41'
+              RefClassType = 'D'
+              ParentTypeInfo.Name = 'VARCHAR2'
+              ParentTypeInfo.TypeID = dtAny
+              ParentTypeInfo.CompType = atNone
+              ParentTypeInfo.Length = 1
+              ParentTypeInfo.Decimal = 0
+              ParentTypeInfo.Language = All
+              ShowAttribute = True
+              Attributes = <>
+              TypeInfo.Name = 'REFERENCE'
+              TypeInfo.TypeID = dtAny
+              TypeInfo.CompType = atNone
+              TypeInfo.Length = 16
+              TypeInfo.Decimal = 0
+              TypeInfo.Language = All
+              Show = False
+              IndexComp = 0
+            end>
+          _AttribCodeName = 'TTTF11MVD#N2F11F11'
+          _ClassCodeName = 'MGRDECIS'
+          _MethodCodeName = 'SHOW'
+          Caption.Alignment = taCenter
+          Caption.Font.Charset = DEFAULT_CHARSET
+          Caption.Font.Color = clWindowText
+          Caption.Font.Height = -11
+          Caption.Font.Name = 'MS Sans Serif'
+          Caption.Font.Style = []
+          Caption.Caption = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+          Caption.Width = 137
+          Caption.Height = 13
+          Caption.Position = lpTop
+          Caption.Indent = 0
+          Caption.Visible = True
+          Caption.ParentFont = False
+          ExpandedWidth = 0
+          Align = alBottom
+          CodeWidth = 0
+          TextWidth = 0
+          TitleHeight = 17
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'MS Sans Serif'
+          TitleFont.Style = []
+          ButtonWidth = 20
+          _MultiLanguage = <
+            item
+              Language = 'RUSSIAN'
+              Left = 0
+              Top = 197
+              Width = 780
+              Height = 158
+              Caption = #1056#1077#1096#1077#1085#1080#1077' '#1074' '#1087#1086#1089#1083#1077#1076#1085#1077#1081' '#1060'11'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -11
+              Font.Name = 'MS Sans Serif'
+              Font.Style = []
+              CaptionFont.Charset = DEFAULT_CHARSET
+              CaptionFont.Color = clWindowText
+              CaptionFont.Height = -11
+              CaptionFont.Name = 'MS Sans Serif'
+              CaptionFont.Style = []
+              CaptionWidth = 137
+            end>
+          TabOrder = 1
+          TabStop = False
+          _OwnerClassCodeName = 'TTTF11MVD'
+          _OwnerMethodCodeName = 'S3089392'
+          _Duplciate = False
+        end
+      end
+    end
+    object TDSPanel3: TDSPanel
+      Left = 2
+      Top = 43
+      Width = 788
+      Height = 57
+      Align = alTop
+      TabOrder = 2
+      ShortCut = 0
+      object DSLabeledCheckBox1: TDSLabeledCheckBox
+        Left = 158
+        Top = 22
+        Width = 45
+        Height = 17
+        CheckValues.OnChecked = #1044#1072
+        CheckValues.OnUnchecked = #1053#1077#1090
+        CheckValues.OnUndefined = #1053#1077#1086#1087#1088'.'
+        CheckValues.Font.Charset = DEFAULT_CHARSET
+        CheckValues.Font.Color = clWindowText
+        CheckValues.Font.Height = -11
+        CheckValues.Font.Name = 'MS Sans Serif'
+        CheckValues.Font.Style = []
+        CheckValues.Visible = False
+        Caption.Alignment = taLeftJustify
+        Caption.Font.Charset = DEFAULT_CHARSET
+        Caption.Font.Color = clWindowText
+        Caption.Font.Height = -11
+        Caption.Font.Name = 'MS Sans Serif'
+        Caption.Font.Style = []
+        Caption.Caption = #1074' '#1041#1044'  -> '#1060'11 -|'
+        Caption.Width = 74
+        Caption.Height = 13
+        Caption.Visible = True
+        Caption.ParentFont = False
+        ParentFont = False
+        TabOrder = 0
+        _AttribCodeName = 'TTTF11MVD#STINPRECEDF11'
+        ShortCut = 0
+        _MultiLanguage = <
+          item
+            Language = 'RUSSIAN'
+            Left = 158
+            Top = 22
+            Width = 45
+            Height = 17
+            Caption = #1074' '#1041#1044'  -> '#1060'11 -|'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            CaptionFont.Charset = DEFAULT_CHARSET
+            CaptionFont.Color = clWindowText
+            CaptionFont.Height = -11
+            CaptionFont.Name = 'MS Sans Serif'
+            CaptionFont.Style = []
+            CaptionWidth = 74
+          end>
+        _OwnerClassCodeName = 'TTTF11MVD'
+        _OwnerMethodCodeName = 'S3089392'
+        _Duplciate = False
+      end
+      object DSLabeledCheckBox2: TDSLabeledCheckBox
+        Left = 511
+        Top = 25
+        Width = 45
+        Height = 17
+        CheckValues.OnChecked = #1044#1072
+        CheckValues.OnUnchecked = #1053#1077#1090
+        CheckValues.OnUndefined = #1053#1077#1086#1087#1088'.'
+        CheckValues.Font.Charset = DEFAULT_CHARSET
+        CheckValues.Font.Color = clWindowText
+        CheckValues.Font.Height = -11
+        CheckValues.Font.Name = 'MS Sans Serif'
+        CheckValues.Font.Style = []
+        CheckValues.Visible = False
+        Caption.Alignment = taLeftJustify
+        Caption.Font.Charset = DEFAULT_CHARSET
+        Caption.Font.Color = clWindowText
+        Caption.Font.Height = -11
+        Caption.Font.Name = 'MS Sans Serif'
+        Caption.Font.Style = []
+        Caption.Caption = #1042' '#1073#1072#1079#1077' -> '#1060'11 -> '#1060'11'
+        Caption.Width = 110
+        Caption.Height = 13
+        Caption.Visible = True
+        Caption.ParentFont = False
+        ParentFont = False
+        TabOrder = 1
+        _AttribCodeName = 'TTTF11MVD#STATEF11F11'
+        ShortCut = 0
+        _MultiLanguage = <
+          item
+            Language = 'RUSSIAN'
+            Left = 511
+            Top = 25
+            Width = 45
+            Height = 17
+            Caption = #1042' '#1073#1072#1079#1077' -> '#1060'11 -> '#1060'11'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -11
+            Font.Name = 'MS Sans Serif'
+            Font.Style = []
+            CaptionFont.Charset = DEFAULT_CHARSET
+            CaptionFont.Color = clWindowText
+            CaptionFont.Height = -11
+            CaptionFont.Name = 'MS Sans Serif'
+            CaptionFont.Style = []
+            CaptionWidth = 110
+          end>
+        _OwnerClassCodeName = 'TTTF11MVD'
+        _OwnerMethodCodeName = 'S3089392'
+        _Duplciate = False
+      end
+    end
+  end
+  object TPBLogic1: TPBLogic
+    Left = 622
+    Top = 2
+    Width = 24
+    Height = 24
+    BPCodeFlag = True
+    _ControlData = <
+      item
+        Description = 'btn_F1OnClick'
+        LogicText = 'ShowMessage('#39#1061#1077#1083#1087' '#1087#1086#1082#1072' '#1085#1077' '#1085#1072#1087#1080#1089#1072#1083#1080#39')'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000001000000000000000000000000000000
+          4D41494E2D000000030000002300000000000000000000000000000000000000
+          D5E5EBEF20EFEEEAE020EDE520EDE0EFE8F1E0EBE8230000003C010100260000
+          00010000000000000000000000BB00040053686F774D6573736167651E000000
+          310000002600000000000000000000000000000000000000526573756C741800
+          00003A0000002600000000000000000000000000000000000000}
+      end
+      item
+        Description = 'btn_F2OnClick'
+        LogicText = 
+          'if btn_F2.Tag=1 Then'#13#10' Begin'#13#10'  if GetDataSetState=dsInactive th' +
+          'en OpenDataSet;'#13#10'  InsertRecord;'#13#10'  btn_F10.Tag :=2;'#13#10'  execute(' +
+          #39'SetStatusKey'#39');'#13#10'  FormMode:=FmNormal;'#13#10' End'#13#10'Else'#13#10' If btn_F2.' +
+          'Tag=2 Then'#13#10'  Begin  // '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1077' '#1076#1077#1081#1089#1090#1074#1080#1081' '#1077#1089#1083#1080' '#1092#1086#1088#1084#1072' '#1085#1072#1093#1086#1076#1080#1090#1089#1103 +
+          ' '#1074' '#1088#1077#1078#1080#1084#1077' '#1074#1074#1086#1076#1072#13#10'   if PostRecord then'#13#10'    begin  // '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1077 +
+          ' '#1076#1077#1081#1089#1090#1074#1080#1081' '#1087#1088#1080' '#1089#1086#1093#1088#1072#1085#1077#1085#1080#1080#13#10'     btn_F10.tag:=1;'#13#10'     Execute('#39'Se' +
+          'tStatusKey'#39');'#13#10'     FFormMode:=fmReadOnly;'#13#10'    end    // '#1079#1072#1074#1077#1088#1096 +
+          #1077#1085#1080#1077' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1103' '#1076#1077#1081#1089#1090#1074#1080#1103#13#10'  End    // '#1079#1072#1074#1077#1088#1096#1077#1085#1080#1077' '#1074#1099#1087#1086#1083#1085#1077#1085#1080#1103' '#1076#1077#1081#1089 +
+          #1090#1074#1080#1103#13#10' Else'#13#10'  If btn_F2.Tag=5 Then'#13#10'   Begin'#13#10'    EditRecord;'#13#10 +
+          '    btn_F10.tag:=2;'#13#10'    execute('#39'setStatusKey'#39');'#13#10'    FormMode:' +
+          '=fmNormal;'#13#10'   end'#13#10'  else'#13#10'   If btn_F2.Tag=6 Then'#13#10'    Begin'#13#10 +
+          '     Execute('#39'CheckRequired'#39');'#13#10'     execute('#39'CheckFieldBeforeSa' +
+          've'#39');'#13#10'     Execute('#39'CheckDates'#39');'#13#10'      if PostRecord then'#13#10'  ' +
+          '     begin'#13#10'        btn_F10.tag:=1;'#13#10'        Execute('#39'SetStatusK' +
+          'ey'#39');'#13#10'       end'#13#10'    End'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000002000000000000000000000000000000
+          4D41494E1E0000003C0000000900000001000000000000000000000089020400
+          62746E5F46321800000005000000090000000000000000000000000000000000
+          00001B0000003C0000000D000000FFFFFFFF0000000000000000D1001E005461
+          6718000000050000000D00000000000000000000000000000000000000180000
+          00010000000F00000001000000000000000000000000000000180000000D0000
+          001000000000000000000000000000000000000000180000001F000000110000
+          001A000000000000000000000000000000270000003C00010032000000020000
+          0000000000000000006300080047657444617461536574537461746518000000
+          050000003200000000000000000000000000000000000000220000003C000000
+          3E000000010000000000000000000000490104006473496E6163746976651800
+          0000050000003E00000000000000000000000000000000000000180000000D00
+          00003E00000000000000000000000000000000000000180000001F0000003F00
+          00000F000000000000000000000000000000230000003C0001004E0000000200
+          000000000000000000002F0008004F70656E44617461536574240000003C0001
+          005F00000002000000000000000000000033000800496E736572745265636F72
+          64180000000100000073000000020000000000000000000000000000001F0000
+          003C0000006B000000010000000000000000000000A102040062746E5F463130
+          18000000050000006B000000000000000000000000000000000000001B000000
+          3CFF000070000000FFFFFFFF0000000000000000D2001E005461672400000003
+          0000008E00000000000000000000000000000000000000536574537461747573
+          4B65791F0000003C0101008F0000000100000000000000000000000F01040065
+          786563757465200000003C000000A60000000100000000000000000000003101
+          0400466D4E6F726D616C1800000005000000A600000000000000000000000000
+          000000000000200000003CFF00009C0000000200000000000000000000005200
+          0800466F726D4D6F64651800000021000000AD00000056000000000000000000
+          0000000000001E0000003C000000BF0000000100000000000000000000008902
+          040062746E5F46321800000005000000BF000000000000000000000000000000
+          000000001B0000003C000000C3000000FFFFFFFF0000000000000000D1001E00
+          5461671800000005000000C30000000000000000000000000000000000000018
+          00000001000000C500000002000000000000000000000000000000180000000D
+          000000C600000000000000000000000000000000000000180000001F000000C7
+          0000002E000000000000000000000000000000220000003C0001002201000002
+          000000000000000000000047000800506F73745265636F726418000000050000
+          002201000000000000000000000000000000000000180000001F000000230100
+          002D00000000000000000000000000000018000000010000006D010000010000
+          000000000000000000000000001F0000003C0000006601000001000000000000
+          0000000000A102040062746E5F46313018000000050000006601000000000000
+          0000000000000000000000001B0000003CFF00006A010000FFFFFFFF00000000
+          00000000D2001E0074616724000000030000008B010000000000000000000000
+          000000000000005365745374617475734B65791F0000003C0101008C01000001
+          00000000000000000000000F01040045786563757465220000003C000000A901
+          000001000000000000000000000035010400666D526561644F6E6C7918000000
+          05000000A9010000000000000000000000000000000000002100000022000000
+          9D0100000100000000000000000000000000000046466F726D4D6F6465180000
+          0021000000DF010000560000000000000000000000000000001E0000003C0000
+          00180200000100000000000000000000008902040062746E5F46321800000005
+          00000018020000000000000000000000000000000000001B0000003C0000001C
+          020000FFFFFFFF0000000000000000D1001E0054616718000000050000001C02
+          00000000000000000000000000000000000018000000010000001E0200000500
+          0000000000000000000000000000180000000D0000001F020000000000000000
+          00000000000000000000180000001F0000002002000040000000000000000000
+          000000000000220000003C0001003D0200000200000000000000000000004300
+          0800456469745265636F72641800000001000000520200000200000000000000
+          00000000000000001F0000003C0000004B020000010000000000000000000000
+          A102040062746E5F46313018000000050000004B020000000000000000000000
+          000000000000001B0000003CFF00004F020000FFFFFFFF0000000000000000D2
+          001E0074616724000000030000006F0200000000000000000000000000000000
+          00007365745374617475734B65791F0000003C01010070020000010000000000
+          0000000000000F01040065786563757465200000003C00000089020000010000
+          00000000000000000031010400666D4E6F726D616C1800000005000000890200
+          0000000000000000000000000000000000200000003CFF00007F020000020000
+          00000000000000000052000800466F726D4D6F64651800000021000000920200
+          00560000000000000000000000000000001E0000003C000000A8020000010000
+          0000000000000000008902040062746E5F46321800000005000000A802000000
+          0000000000000000000000000000001B0000003C000000AC020000FFFFFFFF00
+          00000000000000D1001E005461671800000005000000AC020000000000000000
+          000000000000000000001800000001000000AE02000006000000000000000000
+          000000000000180000000D000000AF0200000000000000000000000000000000
+          0000180000001F000000B0020000560000000000000000000000000000002500
+          000003000000DC02000000000000000000000000000000000000436865636B52
+          657175697265641F0000003C010100DD0200000100000000000000000000000F
+          010400457865637574652C000000030000000303000000000000000000000000
+          000000000000436865636B4669656C644265666F7265536176651F0000003C01
+          0100040300000100000000000000000000000F01040065786563757465220000
+          00030000002003000000000000000000000000000000000000436865636B4461
+          7465731F0000003C010100210300000100000000000000000000000F01040045
+          786563757465220000003C000100380300000200000000000000000000004700
+          0800506F73745265636F72641800000005000000380300000000000000000000
+          0000000000000000180000001F00000039030000560000000000000000000000
+          0000000018000000010000006203000001000000000000000000000000000000
+          1F0000003C0000005B030000010000000000000000000000A102040062746E5F
+          46313018000000050000005B030000000000000000000000000000000000001B
+          0000003CFF00005F030000FFFFFFFF0000000000000000D2001E007461672400
+          0000030000008303000000000000000000000000000000000000536574537461
+          7475734B65791F0000003C010100840300000100000000000000000000000F01
+          0400457865637574651E000000310000009C0300000000000000000000000000
+          0000000000526573756C74180000003A0000009C030000000000000000000000
+          00000000000000}
+      end
+      item
+        Description = 'btn_F3OnClick'
+        LogicText = 
+          'If btn_F3.Tag=1 Then'#13#10'Begin'#13#10' if GetDataSetState=dsInactive then' +
+          ' OpenDataSet;'#13#10' btn_F10.tag:=3;'#13#10' FormMode:=FmNormal;'#13#10' insertRe' +
+          'cord;'#13#10' execute('#39'SetStatusKey'#39');'#13#10'End Else'#13#10' If btn_F3.Tag=3 The' +
+          'n'#13#10'  Begin'#13#10'  End Else'#13#10'   If btn_F3.Tag=5 Then'#13#10'    Begin'#13#10'    ' +
+          ' btn_F10.tag:=2'#13#10'     execute('#39'SetStatusKey'#39');'#13#10'     FormMode:=f' +
+          'mNormal;'#13#10'     EditRecord;'#13#10'    End Else'#13#10'     If btn_F3.Tag=6 T' +
+          'hen'#13#10'      Begin'#13#10'      deleteRecord;'#13#10'      End'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000001000000000000000000000000000000
+          4D41494E1E0000003C000000090000000100000000000000000000008D020400
+          62746E5F46331800000005000000090000000000000000000000000000000000
+          00001B0000003C0000000D000000FFFFFFFF0000000000000000D1001E005461
+          6718000000050000000D00000000000000000000000000000000000000180000
+          00010000000F00000001000000000000000000000000000000180000000D0000
+          001000000000000000000000000000000000000000180000001F000000110000
+          001A000000000000000000000000000000270000003C00010030000000020000
+          0000000000000000006300080047657444617461536574537461746518000000
+          050000003000000000000000000000000000000000000000220000003C000000
+          3C000000010000000000000000000000490104006473496E6163746976651800
+          0000050000003C00000000000000000000000000000000000000180000000D00
+          00003C00000000000000000000000000000000000000180000001F0000003D00
+          00000F000000000000000000000000000000230000003C0001004C0000000200
+          000000000000000000002F0008004F70656E4461746153657418000000010000
+          005E000000030000000000000000000000000000001F0000003C000000570000
+          00010000000000000000000000A102040062746E5F4631301800000005000000
+          57000000000000000000000000000000000000001B0000003CFF00005B000000
+          FFFFFFFF0000000000000000D2001E00746167200000003C0000007400000001
+          000000000000000000000031010400466D4E6F726D616C180000000500000074
+          00000000000000000000000000000000000000200000003CFF00006A00000002
+          000000000000000000000052000800466F726D4D6F6465240000003C00010084
+          00000002000000000000000000000033000800696E736572745265636F726424
+          000000030000009E000000000000000000000000000000000000005365745374
+          617475734B65791F0000003C0101009F0000000100000000000000000000000F
+          010400657865637574651800000021000000A50000003C000000000000000000
+          0000000000001E0000003C000000B60000000100000000000000000000008D02
+          040062746E5F46331800000005000000B6000000000000000000000000000000
+          000000001B0000003C000000BA000000FFFFFFFF0000000000000000D1001E00
+          5461671800000005000000BA0000000000000000000000000000000000000018
+          00000001000000BC00000003000000000000000000000000000000180000000D
+          000000BD00000000000000000000000000000000000000180000001F000000BE
+          000000220000000000000000000000000000001800000021000000D10000003C
+          0000000000000000000000000000001E0000003C000000E40000000100000000
+          000000000000008D02040062746E5F46331800000005000000E4000000000000
+          000000000000000000000000001B0000003C000000E8000000FFFFFFFF000000
+          0000000000D1001E005461671800000005000000E80000000000000000000000
+          00000000000000001800000001000000EA000000050000000000000000000000
+          00000000180000000D000000EB00000000000000000000000000000000000000
+          180000001F000000EC0000003400000000000000000000000000000018000000
+          010000000F010000020000000000000000000000000000001F0000003C000000
+          08010000010000000000000000000000A102040062746E5F4631301800000005
+          00000008010000000000000000000000000000000000001B0000003CFF00000C
+          010000FFFFFFFF0000000000000000D2001E0074616724000000030000002C01
+          0000000000000000000000000000000000005365745374617475734B65791F00
+          00003C0101002D0100000100000000000000000000000F010400657865637574
+          65200000003C0000004701000001000000000000000000000031010400666D4E
+          6F726D616C180000000500000047010000000000000000000000000000000000
+          00200000003CFF00003D01000002000000000000000000000052000800466F72
+          6D4D6F6465220000003C00010059010000020000000000000000000000430008
+          00456469745265636F72641800000021000000630100003C0000000000000000
+          000000000000001E0000003C000000780100000100000000000000000000008D
+          02040062746E5F46331800000005000000780100000000000000000000000000
+          00000000001B0000003C0000007C010000FFFFFFFF0000000000000000D1001E
+          0054616718000000050000007C01000000000000000000000000000000000000
+          18000000010000007E0100000600000000000000000000000000000018000000
+          0D0000007F01000000000000000000000000000000000000180000001F000000
+          800100003C000000000000000000000000000000240000003C000100A4010000
+          0200000000000000000000003700080064656C6574655265636F72641E000000
+          31000000B201000000000000000000000000000000000000526573756C741800
+          00003A000000B201000000000000000000000000000000000000}
+      end
+      item
+        Description = 'btn_F4OnClick'
+        LogicText = 
+          'If (btn_F10.Tag=1) Or (btn_F10.Tag=2) Or (btn_F10.Tag=3)  Then /' +
+          '/'#1087#1077#1088#1077#1093#1086#1076' '#1074' '#1088#1077#1078#1080#1084' '#1087#1086#1080#1089#1082#1072#13#10'Begin'#13#10' if GetDataSetState=dsInactive t' +
+          'hen OpenDataSet;'#13#10' FormState :=fmNormal;'#13#10' btn_F10.tag:=4;'#13#10' exe' +
+          'cute('#39'SetStatusKey'#39');'#13#10' FormMode:=fmSearchForm;'#13#10'End Else'#13#10' If b' +
+          'tn_F10.Tag=4 Then //'#1088#1077#1078#1080#1084' '#1087#1086#1080#1089#1082#1072#13#10'  Begin'#13#10'   If Find Then'#13#10'    ' +
+          'Begin'#13#10'     FormState :=fmReadOnly;'#13#10'     btn_F10.tag:=5;'#13#10'     ' +
+          'execute('#39'SetStatusKey'#39');'#13#10'    End'#13#10'  end else'#13#10'   If (btn_F10.Ta' +
+          'g=5) or (btn_F10.Tag=6) Then'#13#10'    begin'#13#10'     btn_F10.tag:=4;'#13#10' ' +
+          '    execute('#39'SetStatusKey'#39');'#13#10'     FormState:=fmNormal;'#13#10'     Cl' +
+          'earForm;'#13#10'     FormMode:=fmNormal;'#13#10'    End'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000002000000000000000000000000000000
+          4D41494E1F0000003C0000000B000000010000000000000000000000A1020400
+          62746E5F46313018000000050000000B00000000000000000000000000000000
+          0000001B0000003C0000000F000000FFFFFFFF0000000000000000D1001E0054
+          616718000000050000000F000000000000000000000000000000000000001800
+          0000010000001100000001000000000000000000000000000000180000000D00
+          000011000000000000000000000000000000000000001F0000003C0000001E00
+          0000010000000000000000000000A102040062746E5F46313018000000050000
+          001E000000000000000000000000000000000000001B0000003C000000220000
+          00FFFFFFFF0000000000000000D1001E00546167180000000500000022000000
+          0000000000000000000000000000000018000000010000002400000002000000
+          000000000000000000000000180000000D000000240000000000000000000000
+          0000000000000000180000001300000029000000000000000000000000000000
+          000000001F0000003C00000031000000010000000000000000000000A1020400
+          62746E5F46313018000000050000003100000000000000000000000000000000
+          0000001B0000003C00000035000000FFFFFFFF0000000000000000D1001E0054
+          6167180000000500000035000000000000000000000000000000000000001800
+          0000010000003700000003000000000000000000000000000000180000000D00
+          0000370000000000000000000000000000000000000018000000130000003A00
+          000000000000000000000000000000000000180000001F0000003B0000002A00
+          0000000000000000000000000000270000003C00010073000000020000000000
+          0000000000006300080047657444617461536574537461746518000000050000
+          007300000000000000000000000000000000000000220000003C0000007F0000
+          00010000000000000000000000490104006473496E6163746976651800000005
+          0000007F00000000000000000000000000000000000000180000000D0000007F
+          00000000000000000000000000000000000000180000001F000000800000001D
+          000000000000000000000000000000230000003C0001008F0000000200000000
+          000000000000002F0008004F70656E44617461536574200000003C000000A700
+          000001000000000000000000000031010400666D4E6F726D616C180000000500
+          0000A70000000000000000000000000000000000000021000000220000009D00
+          000001000000000000000000000000000000466F726D53746174651800000001
+          000000B9000000040000000000000000000000000000001F0000003C000000B2
+          000000010000000000000000000000A102040062746E5F463130180000000500
+          0000B2000000000000000000000000000000000000001B0000003CFF0000B600
+          0000FFFFFFFF0000000000000000D2001E007461672400000003000000D30000
+          00000000000000000000000000000000005365745374617475734B65791F0000
+          003C010100D40000000100000000000000000000000F01040065786563757465
+          240000003C000000EE00000001000000000000000000000039010400666D5365
+          61726368466F726D1800000005000000EE000000000000000000000000000000
+          00000000200000003CFF0000E000000002000000000000000000000052000800
+          466F726D4D6F64651800000021000000F4000000590000000000000000000000
+          000000001F0000003C00000006010000010000000000000000000000A1020400
+          62746E5F46313018000000050000000601000000000000000000000000000000
+          0000001B0000003C0000000A010000FFFFFFFF0000000000000000D1001E0054
+          616718000000050000000A010000000000000000000000000000000000001800
+          0000010000000C01000004000000000000000000000000000000180000000D00
+          00000D01000000000000000000000000000000000000180000001F0000000E01
+          00003E0000000000000000000000000000001C0000003C000100360100000200
+          000000000000000000004F00080046696E641800000005000000360100000000
+          0000000000000000000000000000180000001F000000370100003D0000000000
+          00000000000000000000220000003C0000006201000001000000000000000000
+          000035010400666D526561644F6E6C7918000000050000006201000000000000
+          0000000000000000000000002100000022000000560100000100000000000000
+          0000000000000000466F726D5374617465180000000100000078010000050000
+          000000000000000000000000001F0000003C0000007101000001000000000000
+          0000000000A102040062746E5F46313018000000050000007101000000000000
+          0000000000000000000000001B0000003CFF000075010000FFFFFFFF00000000
+          00000000D2001E00746167240000000300000096010000000000000000000000
+          000000000000005365745374617475734B65791F0000003C0101009701000001
+          00000000000000000000000F010400657865637574651800000021000000A801
+          0000590000000000000000000000000000001F0000003C000000BD0100000100
+          00000000000000000000A102040062746E5F4631301800000005000000BD0100
+          00000000000000000000000000000000001B0000003C000000C1010000FFFFFF
+          FF0000000000000000D1001E005461671800000005000000C101000000000000
+          0000000000000000000000001800000001000000C30100000500000000000000
+          0000000000000000180000000D000000C3010000000000000000000000000000
+          000000001F0000003C000000D0010000010000000000000000000000A1020400
+          62746E5F4631301800000005000000D001000000000000000000000000000000
+          0000001B0000003C000000D4010000FFFFFFFF0000000000000000D1001E0054
+          61671800000005000000D4010000000000000000000000000000000000001800
+          000001000000D601000006000000000000000000000000000000180000000D00
+          0000D6010000000000000000000000000000000000001800000013000000D801
+          000000000000000000000000000000000000180000001F000000D90100005900
+          00000000000000000000000000001800000001000000FC010000040000000000
+          000000000000000000001F0000003C000000F501000001000000000000000000
+          0000A102040062746E5F4631301800000005000000F501000000000000000000
+          0000000000000000001B0000003CFF0000F9010000FFFFFFFF00000000000000
+          00D2001E0074616724000000030000001A020000000000000000000000000000
+          000000005365745374617475734B65791F0000003C0101001B02000001000000
+          00000000000000000F01040065786563757465200000003C0000003602000001
+          000000000000000000000031010400666D4E6F726D616C180000000500000036
+          0200000000000000000000000000000000000021000000220000002C02000001
+          000000000000000000000000000000466F726D5374617465210000003C000100
+          470200000200000000000000000000002B000800436C656172466F726D200000
+          003C0000006102000001000000000000000000000031010400666D4E6F726D61
+          6C18000000050000006102000000000000000000000000000000000000200000
+          003CFF00005702000002000000000000000000000052000800466F726D4D6F64
+          651E000000310000006D02000000000000000000000000000000000000526573
+          756C74180000003A0000006D02000000000000000000000000000000000000}
+      end
+      item
+        Description = 'btn_F10OnClick'
+        LogicText = 
+          'if (btn_F10.tag=2) or (btn_F10.tag = 3) or (btn_F10.tag = 4) or ' +
+          '(btn_F10.tag = 5) or (btn_F10.tag = 6) then'#13#10'begin'#13#10'formMode:=Fm' +
+          'ReadOnly;'#13#10'btn_F10.tag:=1;'#13#10'execute('#39'setStatusKey'#39');'#13#10'end else'#13#10 +
+          'if btn_F10.tag=1 then close;'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000001000000000000000000000000000000
+          4D41494E1F0000003C0000000B000000010000000000000000000000A1020400
+          62746E5F46313018000000050000000B00000000000000000000000000000000
+          0000001B0000003C0000000F000000FFFFFFFF0000000000000000D1001E0074
+          616718000000050000000F000000000000000000000000000000000000001800
+          0000010000001100000002000000000000000000000000000000180000000D00
+          000011000000000000000000000000000000000000001F0000003C0000001E00
+          0000010000000000000000000000A102040062746E5F46313018000000050000
+          001E000000000000000000000000000000000000001B0000003C000000230000
+          00FFFFFFFF0000000000000000D1001E00746167180000000500000023000000
+          0000000000000000000000000000000018000000010000002600000003000000
+          000000000000000000000000180000000D000000260000000000000000000000
+          000000000000000018000000130000002B000000000000000000000000000000
+          000000001F0000003C00000033000000010000000000000000000000A1020400
+          62746E5F46313018000000050000003300000000000000000000000000000000
+          0000001B0000003C00000038000000FFFFFFFF0000000000000000D1001E0074
+          6167180000000500000038000000000000000000000000000000000000001800
+          0000010000003B00000004000000000000000000000000000000180000000D00
+          00003B0000000000000000000000000000000000000018000000130000004000
+          0000000000000000000000000000000000001F0000003C000000480000000100
+          00000000000000000000A102040062746E5F4631301800000005000000480000
+          00000000000000000000000000000000001B0000003C0000004D000000FFFFFF
+          FF0000000000000000D1001E0074616718000000050000004D00000000000000
+          0000000000000000000000001800000001000000500000000500000000000000
+          0000000000000000180000000D00000050000000000000000000000000000000
+          0000000018000000130000005500000000000000000000000000000000000000
+          1F0000003C0000005D000000010000000000000000000000A102040062746E5F
+          46313018000000050000005D000000000000000000000000000000000000001B
+          0000003C00000062000000FFFFFFFF0000000000000000D1001E007461671800
+          0000050000006200000000000000000000000000000000000000180000000100
+          00006500000006000000000000000000000000000000180000000D0000006500
+          0000000000000000000000000000000000001800000013000000670000000000
+          0000000000000000000000000000180000001F000000680000002E0000000000
+          00000000000000000000220000003C0000008800000001000000000000000000
+          000035010400466D526561644F6E6C7918000000050000008800000000000000
+          000000000000000000000000200000003CFF00007C0000000200000000000000
+          0000000052000800666F726D4D6F646518000000010000009900000001000000
+          0000000000000000000000001F0000003C000000920000000100000000000000
+          00000000A102040062746E5F4631301800000005000000920000000000000000
+          00000000000000000000001B0000003CFF000096000000FFFFFFFF0000000000
+          000000D2001E007461672400000003000000B200000000000000000000000000
+          0000000000007365745374617475734B65791F0000003C010100B30000000100
+          000000000000000000000F010400657865637574651800000021000000B90000
+          00360000000000000000000000000000001F0000003C000000CA000000010000
+          000000000000000000A102040062746E5F4631301800000005000000CA000000
+          000000000000000000000000000000001B0000003C000000CE000000FFFFFFFF
+          0000000000000000D1001E007461671800000005000000CE0000000000000000
+          00000000000000000000001800000001000000D0000000010000000000000000
+          00000000000000180000000D000000D100000000000000000000000000000000
+          000000180000001F000000D2000000360000000000000000000000000000001D
+          0000003C000100DB00000002000000000000000000000027000800636C6F7365
+          1E00000031000000DE0000000000000000000000000000000000000052657375
+          6C74180000003A000000DE00000000000000000000000000000000000000}
+      end
+      item
+        Description = 'SetStatusKey'
+        LogicText = 
+          'if btn_F10.tag=1 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetSta' +
+          'te('#39'F1 '#1055#1086#1084#1086#1096#1100#39'    ,1,True );'#13#10'btn_F2.SetState('#39'F2 '#1053#1086#1074#1072#1103#39'     ,1,' +
+          'True);'#13#10'btn_F3.SetState('#39'F3 '#1050#1086#1085#1090#1088#1086#1083#1100#39'  ,1,True );'#13#10'btn_F4.SetSta' +
+          'te('#39'F4 '#1055#1086#1080#1089#1082#39'     ,1,True );'#13#10'btn_F5.SetState('#39'F5'#39'    ,1,False);' +
+          #13#10'btn_F6.SetState('#39'F6'#39',1,False);'#13#10'btn_F7.SetState('#39'F7'#39' ,1,False)' +
+          ';'#13#10'btn_F8.SetState('#39'F8'#39' ,1,False);'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39' ' +
+          '   ,1,False);'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,1,True);'#13#10'end;'#13#10'i' +
+          'f btn_F10.tag=2 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetStat' +
+          'e('#39'F1 '#1055#1086#1084#1086#1096#1100#39'    ,2,True );'#13#10'btn_F2.SetState('#39'F2 '#1057#1086#1093#1088#1072#1085#1080#1090#1100#39' ,2,T' +
+          'rue );'#13#10'btn_F3.SetState('#39'F3 '#1050#1086#1085#1090#1088#1086#1083#1100#39'  ,2,False);'#13#10'btn_F4.SetSta' +
+          'te('#39'F4 '#1055#1086#1080#1089#1082#39'     ,2,False );'#13#10'btn_F5.SetState('#39'F5'#39'    ,2,False)' +
+          ';'#13#10'btn_F6.SetState('#39'F6'#39',2,False);'#13#10'btn_F7.SetState('#39'F7'#39' ,2,False' +
+          ');'#13#10'btn_F8.SetState('#39'F8'#39' ,2,False);'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39 +
+          '    ,2,True );'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,2,True);'#13#10'end;'#13#10 +
+          'if btn_F10.tag=3 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetSta' +
+          'te('#39'F1 '#1055#1086#1084#1086#1096#1100#39'    ,3,True );'#13#10'btn_F2.SetState('#39'F2 '#1057#1086#1093#1088#1072#1085#1080#1090#1100#39' ,3,' +
+          'False);'#13#10'btn_F3.SetState('#39'F3 '#1055#1088#1086#1074#1077#1088#1080#1090#1100#39' ,3,True );'#13#10'btn_F4.SetSt' +
+          'ate('#39'F4 '#1055#1086#1080#1089#1082#39'     ,3,False );'#13#10'btn_F5.SetState('#39'F5'#39'  ,3,false )' +
+          ';'#13#10'btn_F6.SetState('#39'F6'#39',3,False);'#13#10'btn_F7.SetState('#39'F7'#39' ,3,False' +
+          ');'#13#10'btn_F8.SetState('#39'F8'#39' ,3,False);'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39 +
+          '    ,3,True );'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,3,True);'#13#10'end;'#13#10 +
+          'if btn_F10.tag=4 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetSta' +
+          'te('#39'F1 '#1055#1086#1084#1086#1096#1100#39'    ,4,True );'#13#10'btn_F2.SetState('#39'F2 '#1057#1086#1093#1088#1072#1085#1080#1090#1100#39' ,4,' +
+          'False);'#13#10'btn_F3.SetState('#39'F3 '#1050#1086#1085#1090#1088#1086#1083#1100#39'  ,4,False);'#13#10'btn_F4.SetSt' +
+          'ate('#39'F4 '#1053#1072#1081#1090#1080#39'     ,4,True );'#13#10'btn_F5.SetState('#39'F5'#39'    ,4,False)' +
+          ';'#13#10'btn_F6.SetState('#39'F6'#39',4,False);'#13#10'btn_F7.SetState('#39'F7'#39' ,4,False' +
+          ');'#13#10'btn_F8.SetState('#39'F8'#39' ,4,False);'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39 +
+          '    ,4,False);'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,4,True);'#13#10'end;'#13#10 +
+          'if btn_F10.tag=5 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetSta' +
+          'te('#39'F1 '#1055#1086#1084#1086#1096#1100#39'    ,5,True );'#13#10'btn_F2.SetState('#39'F2 '#1053#1072' '#1074#1074#1086#1076#39'   ,5,' +
+          'True );'#13#10'btn_F3.SetState('#39'F3 '#1055#1088#1072#1074#1082#1072#39',5,True);'#13#10'btn_F4.SetState('#39 +
+          'F4 '#1053#1086#1074#1099#1081' '#1087#1086#1080#1089#1082#39',5,True );'#13#10'btn_F5.SetState('#39'F5'#39'    ,5,True );'#13#10'b' +
+          'tn_F6.SetState('#39'F6'#39',5,True );'#13#10'btn_F7.SetState('#39'F7'#39' ,5,True );'#13#10 +
+          'btn_F8.SetState('#39'F8'#39' ,5,True );'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39'    ' +
+          ',5,True );'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,5,True);'#13#10'end;'#13#10'if b' +
+          'tn_F10.tag=6 then //'#1087#1088#1086#1074#1077#1088#1082#1072' '#1089#1086#1089#1090#1086#1103#1085#1080#1103#13#10'begin'#13#10'btn_F1.SetState('#39 +
+          'F1 '#1055#1086#1084#1086#1096#1100#39'    ,6,True );'#13#10'btn_F2.SetState('#39'F2 '#1057#1086#1093#1088#1072#1085#1080#1090#1100#39' ,6,True' +
+          ' );'#13#10'btn_F3.SetState('#39'F3 '#1059#1076#1072#1083#1080#1090#1100#39'   ,6,False);'#13#10'btn_F4.SetState(' +
+          #39'F4 '#1053#1086#1074#1099#1081' '#1087#1086#1080#1089#1082#39',6,True );'#13#10'btn_F5.SetState('#39'F5'#39'    ,6,False);'#13#10 +
+          'btn_F6.SetState('#39'F6'#39',6,False);'#13#10'btn_F7.SetState('#39'F7'#39' ,6,False);'#13 +
+          #10'btn_F8.SetState('#39'F8'#39' ,6,False);'#13#10'btn_F9.SetState('#39'F9 '#1055#1077#1095#1072#1090#1100#39'   ' +
+          ' ,6,True );'#13#10'btn_F10.SetState('#39'F10 '#1042#1099#1093#1086#1076#39'   ,6,True);'#13#10'end'#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000000100000001000000000000000000000000000000
+          4D41494E1F0000003C0000000A000000010000000000000000000000A1020400
+          62746E5F46313018000000050000000A00000000000000000000000000000000
+          0000001B0000003C0000000E000000FFFFFFFF0000000000000000D1001E0074
+          616718000000050000000E000000000000000000000000000000000000001800
+          0000010000001000000001000000000000000000000000000000180000000D00
+          00001100000000000000000000000000000000000000180000001F0000001200
+          00004E0000000000000000000000000000001E0000003C000000390000000100
+          000000000000000000008502040062746E5F4631180000000500000039000000
+          0000000000000000000000000000000021000000030000004E00000000000000
+          000000000000000000000000463120CFEEECEEF8FC1800000001000000540000
+          00010000000000000000000000000000001C0000003C0000005A000000010000
+          000000000000000000150104005472756518000000050000005A000000000000
+          00000000000000000000000000200000003C0301005B000000FFFFFFFF000000
+          00000000000B001E0053657453746174651E0000003C00000064000000010000
+          0000000000000000008902040062746E5F463218000000050000006400000000
+          0000000000000000000000000000002000000003000000780000000000000000
+          0000000000000000000000463220CDEEE2E0FF18000000010000007F00000001
+          0000000000000000000000000000001C0000003C000000840000000100000000
+          0000000000000015010400547275651800000005000000840000000000000000
+          0000000000000000000000200000003C03010085000000FFFFFFFF0000000000
+          0000000B001E0053657453746174651E0000003C0000008E0000000100000000
+          000000000000008D02040062746E5F463318000000050000008E000000000000
+          000000000000000000000000002300000003000000A500000000000000000000
+          000000000000000000463320CAEEEDF2F0EEEBFC1800000001000000A9000000
+          010000000000000000000000000000001C0000003C000000AF00000001000000
+          000000000000000015010400547275651800000005000000AF00000000000000
+          000000000000000000000000200000003C030100B0000000FFFFFFFF00000000
+          000000000B001E0053657453746174651E0000003C000000B900000001000000
+          0000000000000000A902040062746E5F46341800000005000000B90000000000
+          00000000000000000000000000002000000003000000CD000000000000000000
+          00000000000000000000463420CFEEE8F1EA1800000001000000D40000000100
+          00000000000000000000000000001C0000003C000000DA000000010000000000
+          00000000000015010400547275651800000005000000DA000000000000000000
+          00000000000000000000200000003C030100DB000000FFFFFFFF000000000000
+          00000B001E0053657453746174651E0000003C000000E4000000010000000000
+          0000000000009102040062746E5F46351800000005000000E400000000000000
+          0000000000000000000000001A00000003000000F20000000000000000000000
+          000000000000000046351800000001000000F800000001000000000000000000
+          0000000000001D0000003C000000FE0000000100000000000000000000001901
+          040046616C73651800000005000000FE00000000000000000000000000000000
+          000000200000003C030100FF000000FFFFFFFF00000000000000000B001E0053
+          657453746174651E0000003C0000000801000001000000000000000000000095
+          02040062746E5F46361800000005000000080100000000000000000000000000
+          00000000001A0000000300000016010000000000000000000000000000000000
+          004636180000000100000018010000010000000000000000000000000000001D
+          0000003C0000001E0100000100000000000000000000001901040046616C7365
+          18000000050000001E0100000000000000000000000000000000000020000000
+          3C0301001F010000FFFFFFFF00000000000000000B001E005365745374617465
+          1E0000003C000000280100000100000000000000000000009902040062746E5F
+          4637180000000500000028010000000000000000000000000000000000001A00
+          0000030000003601000000000000000000000000000000000000463718000000
+          0100000039010000010000000000000000000000000000001D0000003C000000
+          3F0100000100000000000000000000001901040046616C736518000000050000
+          003F01000000000000000000000000000000000000200000003C030100400100
+          00FFFFFFFF00000000000000000B001E0053657453746174651E0000003C0000
+          00490100000100000000000000000000009D02040062746E5F46381800000005
+          00000049010000000000000000000000000000000000001A0000000300000057
+          01000000000000000000000000000000000000463818000000010000005A0100
+          00010000000000000000000000000000001D0000003C00000060010000010000
+          0000000000000000001901040046616C73651800000005000000600100000000
+          0000000000000000000000000000200000003C03010061010000FFFFFFFF0000
+          0000000000000B001E0053657453746174651E0000003C0000006A0100000100
+          00000000000000000000A502040062746E5F463918000000050000006A010000
+          0000000000000000000000000000000021000000030000007F01000000000000
+          000000000000000000000000463920CFE5F7E0F2FC1800000001000000850100
+          00010000000000000000000000000000001D0000003C0000008B010000010000
+          0000000000000000001901040046616C736518000000050000008B0100000000
+          0000000000000000000000000000200000003C0301008C010000FFFFFFFF0000
+          0000000000000B001E0053657453746174651F0000003C000000960100000100
+          00000000000000000000A102040062746E5F4631301800000005000000960100
+          00000000000000000000000000000000002100000003000000AB010000000000
+          0000000000000000000000000046313020C2FBF5EEE41800000001000000B001
+          0000010000000000000000000000000000001C0000003C000000B50100000100
+          0000000000000000000015010400547275651800000005000000B50100000000
+          0000000000000000000000000000200000003C030100B6010000FFFFFFFF0000
+          0000000000000B001E0053657453746174651F0000003C000000C90100000100
+          00000000000000000000A102040062746E5F4631301800000005000000C90100
+          00000000000000000000000000000000001B0000003C000000CD010000FFFFFF
+          FF0000000000000000D1001E007461671800000005000000CD01000000000000
+          0000000000000000000000001800000001000000CF0100000200000000000000
+          0000000000000000180000000D000000D0010000000000000000000000000000
+          00000000180000001F000000D10100009B000000000000000000000000000000
+          1E0000003C000000F80100000100000000000000000000008502040062746E5F
+          46311800000005000000F8010000000000000000000000000000000000002100
+          0000030000000D02000000000000000000000000000000000000463120CFEEEC
+          EEF8FC180000000100000013020000020000000000000000000000000000001C
+          0000003C00000019020000010000000000000000000000150104005472756518
+          000000050000001902000000000000000000000000000000000000200000003C
+          0301001A020000FFFFFFFF00000000000000000B001E0053657453746174651E
+          0000003C000000230200000100000000000000000000008902040062746E5F46
+          3218000000050000002302000000000000000000000000000000000000240000
+          00030000003B02000000000000000000000000000000000000463220D1EEF5F0
+          E0EDE8F2FC18000000010000003E020000020000000000000000000000000000
+          001C0000003C0000004402000001000000000000000000000015010400547275
+          6518000000050000004402000000000000000000000000000000000000200000
+          003C03010045020000FFFFFFFF00000000000000000B001E0053657453746174
+          651E0000003C0000004E0200000100000000000000000000008D02040062746E
+          5F463318000000050000004E0200000000000000000000000000000000000023
+          000000030000006502000000000000000000000000000000000000463320CAEE
+          EDF2F0EEEBFC1800000001000000690200000200000000000000000000000000
+          00001D0000003C0000006F020000010000000000000000000000190104004661
+          6C736518000000050000006F0200000000000000000000000000000000000020
+          0000003C03010070020000FFFFFFFF00000000000000000B001E005365745374
+          6174651E0000003C00000079020000010000000000000000000000A902040062
+          746E5F4634180000000500000079020000000000000000000000000000000000
+          0020000000030000008D02000000000000000000000000000000000000463420
+          CFEEE8F1EA180000000100000094020000020000000000000000000000000000
+          001D0000003C0000009B0200000100000000000000000000001901040046616C
+          736518000000050000009B020000000000000000000000000000000000002000
+          00003C0301009C020000FFFFFFFF00000000000000000B001E00536574537461
+          74651E0000003C000000A5020000010000000000000000000000910204006274
+          6E5F46351800000005000000A502000000000000000000000000000000000000
+          1A00000003000000B30200000000000000000000000000000000000046351800
+          000001000000B9020000020000000000000000000000000000001D0000003C00
+          0000BF0200000100000000000000000000001901040046616C73651800000005
+          000000BF02000000000000000000000000000000000000200000003C030100C0
+          020000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C
+          000000C90200000100000000000000000000009502040062746E5F4636180000
+          0005000000C9020000000000000000000000000000000000001A000000030000
+          00D70200000000000000000000000000000000000046361800000001000000D9
+          020000020000000000000000000000000000001D0000003C000000DF02000001
+          00000000000000000000001901040046616C73651800000005000000DF020000
+          00000000000000000000000000000000200000003C030100E0020000FFFFFFFF
+          00000000000000000B001E0053657453746174651E0000003C000000E9020000
+          0100000000000000000000009902040062746E5F46371800000005000000E902
+          0000000000000000000000000000000000001A00000003000000F70200000000
+          000000000000000000000000000046371800000001000000FA02000002000000
+          0000000000000000000000001D0000003C000000000300000100000000000000
+          000000001901040046616C736518000000050000000003000000000000000000
+          000000000000000000200000003C03010001030000FFFFFFFF00000000000000
+          000B001E0053657453746174651E0000003C0000000A03000001000000000000
+          00000000009D02040062746E5F463818000000050000000A0300000000000000
+          00000000000000000000001A0000000300000018030000000000000000000000
+          00000000000000463818000000010000001B0300000200000000000000000000
+          00000000001D0000003C00000021030000010000000000000000000000190104
+          0046616C73651800000005000000210300000000000000000000000000000000
+          0000200000003C03010022030000FFFFFFFF00000000000000000B001E005365
+          7453746174651E0000003C0000002B030000010000000000000000000000A502
+          040062746E5F463918000000050000002B030000000000000000000000000000
+          0000000021000000030000004003000000000000000000000000000000000000
+          463920CFE5F7E0F2FC1800000001000000460300000200000000000000000000
+          00000000001C0000003C0000004C030000010000000000000000000000150104
+          005472756518000000050000004C030000000000000000000000000000000000
+          00200000003C0301004D030000FFFFFFFF00000000000000000B001E00536574
+          53746174651F0000003C00000057030000010000000000000000000000A10204
+          0062746E5F463130180000000500000057030000000000000000000000000000
+          0000000021000000030000006C03000000000000000000000000000000000000
+          46313020C2FBF5EEE41800000001000000710300000200000000000000000000
+          00000000001C0000003C00000076030000010000000000000000000000150104
+          0054727565180000000500000076030000000000000000000000000000000000
+          00200000003C03010077030000FFFFFFFF00000000000000000B001E00536574
+          53746174651F0000003C0000008A030000010000000000000000000000A10204
+          0062746E5F46313018000000050000008A030000000000000000000000000000
+          000000001B0000003C0000008E030000FFFFFFFF0000000000000000D1001E00
+          74616718000000050000008E0300000000000000000000000000000000000018
+          000000010000009003000003000000000000000000000000000000180000000D
+          0000009103000000000000000000000000000000000000180000001F00000092
+          030000E80000000000000000000000000000001E0000003C000000B903000001
+          00000000000000000000008502040062746E5F46311800000005000000B90300
+          00000000000000000000000000000000002100000003000000CE030000000000
+          00000000000000000000000000463120CFEEECEEF8FC1800000001000000D403
+          0000030000000000000000000000000000001C0000003C000000DA0300000100
+          0000000000000000000015010400547275651800000005000000DA0300000000
+          0000000000000000000000000000200000003C030100DB030000FFFFFFFF0000
+          0000000000000B001E0053657453746174651E0000003C000000E40300000100
+          000000000000000000008902040062746E5F46321800000005000000E4030000
+          000000000000000000000000000000002400000003000000FC03000000000000
+          000000000000000000000000463220D1EEF5F0E0EDE8F2FC1800000001000000
+          FF030000030000000000000000000000000000001D0000003C00000005040000
+          0100000000000000000000001901040046616C73651800000005000000050400
+          0000000000000000000000000000000000200000003C03010006040000FFFFFF
+          FF00000000000000000B001E0053657453746174651E0000003C0000000F0400
+          000100000000000000000000008D02040062746E5F463318000000050000000F
+          0400000000000000000000000000000000000024000000030000002704000000
+          000000000000000000000000000000463320CFF0EEE2E5F0E8F2FC1800000001
+          0000002A040000030000000000000000000000000000001C0000003C00000030
+          0400000100000000000000000000001501040054727565180000000500000030
+          04000000000000000000000000000000000000200000003C03010031040000FF
+          FFFFFF00000000000000000B001E0053657453746174651E0000003C0000003A
+          040000010000000000000000000000A902040062746E5F463418000000050000
+          003A0400000000000000000000000000000000000020000000030000004E0400
+          0000000000000000000000000000000000463420CFEEE8F1EA18000000010000
+          0055040000030000000000000000000000000000001D0000003C0000005C0400
+          000100000000000000000000001901040046616C736518000000050000005C04
+          000000000000000000000000000000000000200000003C0301005D040000FFFF
+          FFFF00000000000000000B001E0053657453746174651E0000003C0000006604
+          00000100000000000000000000009102040062746E5F46351800000005000000
+          66040000000000000000000000000000000000001A0000000300000074040000
+          0000000000000000000000000000000046351800000001000000780400000300
+          00000000000000000000000000001D0000003C0000007F040000010000000000
+          0000000000001901040066616C736518000000050000007F0400000000000000
+          0000000000000000000000200000003C03010080040000FFFFFFFF0000000000
+          0000000B001E0053657453746174651E0000003C000000890400000100000000
+          000000000000009502040062746E5F4636180000000500000089040000000000
+          000000000000000000000000001A000000030000009704000000000000000000
+          0000000000000000004636180000000100000099040000030000000000000000
+          000000000000001D0000003C0000009F04000001000000000000000000000019
+          01040046616C736518000000050000009F040000000000000000000000000000
+          00000000200000003C030100A0040000FFFFFFFF00000000000000000B001E00
+          53657453746174651E0000003C000000A9040000010000000000000000000000
+          9902040062746E5F46371800000005000000A904000000000000000000000000
+          0000000000001A00000003000000B70400000000000000000000000000000000
+          000046371800000001000000BA04000003000000000000000000000000000000
+          1D0000003C000000C00400000100000000000000000000001901040046616C73
+          651800000005000000C004000000000000000000000000000000000000200000
+          003C030100C1040000FFFFFFFF00000000000000000B001E0053657453746174
+          651E0000003C000000CA0400000100000000000000000000009D02040062746E
+          5F46381800000005000000CA040000000000000000000000000000000000001A
+          00000003000000D8040000000000000000000000000000000000004638180000
+          0001000000DB040000030000000000000000000000000000001D0000003C0000
+          00E10400000100000000000000000000001901040046616C7365180000000500
+          0000E104000000000000000000000000000000000000200000003C030100E204
+          0000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C00
+          0000EB040000010000000000000000000000A502040062746E5F463918000000
+          05000000EB040000000000000000000000000000000000002100000003000000
+          0005000000000000000000000000000000000000463920CFE5F7E0F2FC180000
+          000100000006050000030000000000000000000000000000001C0000003C0000
+          000C050000010000000000000000000000150104005472756518000000050000
+          000C05000000000000000000000000000000000000200000003C0301000D0500
+          00FFFFFFFF00000000000000000B001E0053657453746174651F0000003C0000
+          0017050000010000000000000000000000A102040062746E5F46313018000000
+          0500000017050000000000000000000000000000000000002100000003000000
+          2C0500000000000000000000000000000000000046313020C2FBF5EEE4180000
+          000100000031050000030000000000000000000000000000001C0000003C0000
+          0036050000010000000000000000000000150104005472756518000000050000
+          003605000000000000000000000000000000000000200000003C030100370500
+          00FFFFFFFF00000000000000000B001E0053657453746174651F0000003C0000
+          004A050000010000000000000000000000A102040062746E5F46313018000000
+          050000004A050000000000000000000000000000000000001B0000003C000000
+          4E050000FFFFFFFF0000000000000000D1001E0074616718000000050000004E
+          0500000000000000000000000000000000000018000000010000005005000004
+          000000000000000000000000000000180000000D000000510500000000000000
+          0000000000000000000000180000001F00000052050000350100000000000000
+          000000000000001E0000003C0000007905000001000000000000000000000085
+          02040062746E5F46311800000005000000790500000000000000000000000000
+          000000000021000000030000008E050000000000000000000000000000000000
+          00463120CFEEECEEF8FC18000000010000009405000004000000000000000000
+          0000000000001C0000003C0000009A0500000100000000000000000000001501
+          04005472756518000000050000009A0500000000000000000000000000000000
+          0000200000003C0301009B050000FFFFFFFF00000000000000000B001E005365
+          7453746174651E0000003C000000A40500000100000000000000000000008902
+          040062746E5F46321800000005000000A4050000000000000000000000000000
+          000000002400000003000000BC05000000000000000000000000000000000000
+          463220D1EEF5F0E0EDE8F2FC1800000001000000BF0500000400000000000000
+          00000000000000001D0000003C000000C5050000010000000000000000000000
+          1901040046616C73651800000005000000C50500000000000000000000000000
+          0000000000200000003C030100C6050000FFFFFFFF00000000000000000B001E
+          0053657453746174651E0000003C000000CF0500000100000000000000000000
+          008D02040062746E5F46331800000005000000CF050000000000000000000000
+          000000000000002300000003000000E605000000000000000000000000000000
+          000000463320CAEEEDF2F0EEEBFC1800000001000000EA050000040000000000
+          000000000000000000001D0000003C000000F005000001000000000000000000
+          00001901040046616C73651800000005000000F0050000000000000000000000
+          00000000000000200000003C030100F1050000FFFFFFFF00000000000000000B
+          001E0053657453746174651E0000003C000000FA050000010000000000000000
+          000000A902040062746E5F46341800000005000000FA05000000000000000000
+          00000000000000000020000000030000000E0600000000000000000000000000
+          0000000000463420CDE0E9F2E818000000010000001506000004000000000000
+          0000000000000000001C0000003C0000001B0600000100000000000000000000
+          00150104005472756518000000050000001B0600000000000000000000000000
+          0000000000200000003C0301001C060000FFFFFFFF00000000000000000B001E
+          0053657453746174651E0000003C000000250600000100000000000000000000
+          009102040062746E5F4635180000000500000025060000000000000000000000
+          000000000000001A000000030000003306000000000000000000000000000000
+          0000004635180000000100000039060000040000000000000000000000000000
+          001D0000003C0000003F0600000100000000000000000000001901040046616C
+          736518000000050000003F060000000000000000000000000000000000002000
+          00003C03010040060000FFFFFFFF00000000000000000B001E00536574537461
+          74651E0000003C00000049060000010000000000000000000000950204006274
+          6E5F463618000000050000004906000000000000000000000000000000000000
+          1A00000003000000570600000000000000000000000000000000000046361800
+          00000100000059060000040000000000000000000000000000001D0000003C00
+          00005F0600000100000000000000000000001901040046616C73651800000005
+          0000005F06000000000000000000000000000000000000200000003C03010060
+          060000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C
+          000000690600000100000000000000000000009902040062746E5F4637180000
+          000500000069060000000000000000000000000000000000001A000000030000
+          007706000000000000000000000000000000000000463718000000010000007A
+          060000040000000000000000000000000000001D0000003C0000008006000001
+          00000000000000000000001901040046616C7365180000000500000080060000
+          00000000000000000000000000000000200000003C03010081060000FFFFFFFF
+          00000000000000000B001E0053657453746174651E0000003C0000008A060000
+          0100000000000000000000009D02040062746E5F463818000000050000008A06
+          0000000000000000000000000000000000001A00000003000000980600000000
+          0000000000000000000000000000463818000000010000009B06000004000000
+          0000000000000000000000001D0000003C000000A10600000100000000000000
+          000000001901040046616C73651800000005000000A106000000000000000000
+          000000000000000000200000003C030100A2060000FFFFFFFF00000000000000
+          000B001E0053657453746174651E0000003C000000AB06000001000000000000
+          0000000000A502040062746E5F46391800000005000000AB0600000000000000
+          00000000000000000000002100000003000000C0060000000000000000000000
+          00000000000000463920CFE5F7E0F2FC1800000001000000C606000004000000
+          0000000000000000000000001D0000003C000000CC0600000100000000000000
+          000000001901040046616C73651800000005000000CC06000000000000000000
+          000000000000000000200000003C030100CD060000FFFFFFFF00000000000000
+          000B001E0053657453746174651F0000003C000000D706000001000000000000
+          0000000000A102040062746E5F4631301800000005000000D706000000000000
+          0000000000000000000000002100000003000000EC0600000000000000000000
+          000000000000000046313020C2FBF5EEE41800000001000000F1060000040000
+          000000000000000000000000001C0000003C000000F606000001000000000000
+          000000000015010400547275651800000005000000F606000000000000000000
+          000000000000000000200000003C030100F7060000FFFFFFFF00000000000000
+          000B001E0053657453746174651F0000003C0000000A07000001000000000000
+          0000000000A102040062746E5F46313018000000050000000A07000000000000
+          0000000000000000000000001B0000003C0000000E070000FFFFFFFF00000000
+          00000000D1001E0074616718000000050000000E070000000000000000000000
+          0000000000000018000000010000001007000005000000000000000000000000
+          000000180000000D000000110700000000000000000000000000000000000018
+          0000001F00000012070000820100000000000000000000000000001E0000003C
+          000000390700000100000000000000000000008502040062746E5F4631180000
+          0005000000390700000000000000000000000000000000000021000000030000
+          004E07000000000000000000000000000000000000463120CFEEECEEF8FC1800
+          00000100000054070000050000000000000000000000000000001C0000003C00
+          00005A0700000100000000000000000000001501040054727565180000000500
+          00005A07000000000000000000000000000000000000200000003C0301005B07
+          0000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C00
+          0000640700000100000000000000000000008902040062746E5F463218000000
+          0500000064070000000000000000000000000000000000002200000003000000
+          7A07000000000000000000000000000000000000463220CDE020E2E2EEE41800
+          0000010000007F070000050000000000000000000000000000001C0000003C00
+          0000850700000100000000000000000000001501040054727565180000000500
+          00008507000000000000000000000000000000000000200000003C0301008607
+          0000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C00
+          00008F0700000100000000000000000000008D02040062746E5F463318000000
+          050000008F070000000000000000000000000000000000002100000003000000
+          A407000000000000000000000000000000000000463320CFF0E0E2EAE0180000
+          0001000000A6070000050000000000000000000000000000001C0000003C0000
+          00AB070000010000000000000000000000150104005472756518000000050000
+          00AB07000000000000000000000000000000000000200000003C030100AC0700
+          00FFFFFFFF00000000000000000B001E0053657453746174651E0000003C0000
+          00B5070000010000000000000000000000A902040062746E5F46341800000005
+          000000B5070000000000000000000000000000000000002600000003000000CF
+          07000000000000000000000000000000000000463420CDEEE2FBE920EFEEE8F1
+          EA1800000001000000D1070000050000000000000000000000000000001C0000
+          003C000000D70700000100000000000000000000001501040054727565180000
+          0005000000D707000000000000000000000000000000000000200000003C0301
+          00D8070000FFFFFFFF00000000000000000B001E0053657453746174651E0000
+          003C000000E10700000100000000000000000000009102040062746E5F463518
+          00000005000000E1070000000000000000000000000000000000001A00000003
+          000000EF07000000000000000000000000000000000000463518000000010000
+          00F5070000050000000000000000000000000000001C0000003C000000FB0700
+          0001000000000000000000000015010400547275651800000005000000FB0700
+          0000000000000000000000000000000000200000003C030100FC070000FFFFFF
+          FF00000000000000000B001E0053657453746174651E0000003C000000050800
+          000100000000000000000000009502040062746E5F4636180000000500000005
+          080000000000000000000000000000000000001A000000030000001308000000
+          0000000000000000000000000000004636180000000100000015080000050000
+          000000000000000000000000001C0000003C0000001B08000001000000000000
+          0000000000150104005472756518000000050000001B08000000000000000000
+          000000000000000000200000003C0301001C080000FFFFFFFF00000000000000
+          000B001E0053657453746174651E0000003C0000002508000001000000000000
+          00000000009902040062746E5F46371800000005000000250800000000000000
+          00000000000000000000001A0000000300000033080000000000000000000000
+          0000000000000046371800000001000000360800000500000000000000000000
+          00000000001C0000003C0000003C080000010000000000000000000000150104
+          005472756518000000050000003C080000000000000000000000000000000000
+          00200000003C0301003D080000FFFFFFFF00000000000000000B001E00536574
+          53746174651E0000003C000000460800000100000000000000000000009D0204
+          0062746E5F463818000000050000004608000000000000000000000000000000
+          0000001A00000003000000540800000000000000000000000000000000000046
+          38180000000100000057080000050000000000000000000000000000001C0000
+          003C0000005D0800000100000000000000000000001501040054727565180000
+          00050000005D08000000000000000000000000000000000000200000003C0301
+          005E080000FFFFFFFF00000000000000000B001E0053657453746174651E0000
+          003C00000067080000010000000000000000000000A502040062746E5F463918
+          0000000500000067080000000000000000000000000000000000002100000003
+          0000007C08000000000000000000000000000000000000463920CFE5F7E0F2FC
+          180000000100000082080000050000000000000000000000000000001C000000
+          3C00000088080000010000000000000000000000150104005472756518000000
+          050000008808000000000000000000000000000000000000200000003C030100
+          89080000FFFFFFFF00000000000000000B001E0053657453746174651F000000
+          3C00000093080000010000000000000000000000A102040062746E5F46313018
+          0000000500000093080000000000000000000000000000000000002100000003
+          000000A80800000000000000000000000000000000000046313020C2FBF5EEE4
+          1800000001000000AD080000050000000000000000000000000000001C000000
+          3C000000B2080000010000000000000000000000150104005472756518000000
+          05000000B208000000000000000000000000000000000000200000003C030100
+          B3080000FFFFFFFF00000000000000000B001E0053657453746174651F000000
+          3C000000C6080000010000000000000000000000A102040062746E5F46313018
+          00000005000000C6080000000000000000000000000000000000001B0000003C
+          000000CA080000FFFFFFFF0000000000000000D1001E00746167180000000500
+          0000CA080000000000000000000000000000000000001800000001000000CC08
+          000006000000000000000000000000000000180000000D000000CD0800000000
+          0000000000000000000000000000180000001F000000CE080000CF0100000000
+          000000000000000000001E0000003C000000F508000001000000000000000000
+          00008502040062746E5F46311800000005000000F50800000000000000000000
+          000000000000000021000000030000000A090000000000000000000000000000
+          00000000463120CFEEECEEF8FC18000000010000001009000006000000000000
+          0000000000000000001C0000003C000000160900000100000000000000000000
+          0015010400547275651800000005000000160900000000000000000000000000
+          0000000000200000003C03010017090000FFFFFFFF00000000000000000B001E
+          0053657453746174651E0000003C000000200900000100000000000000000000
+          008902040062746E5F4632180000000500000020090000000000000000000000
+          0000000000000024000000030000003809000000000000000000000000000000
+          000000463220D1EEF5F0E0EDE8F2FC18000000010000003B0900000600000000
+          00000000000000000000001C0000003C00000041090000010000000000000000
+          0000001501040054727565180000000500000041090000000000000000000000
+          00000000000000200000003C03010042090000FFFFFFFF00000000000000000B
+          001E0053657453746174651E0000003C0000004B090000010000000000000000
+          0000008D02040062746E5F463318000000050000004B09000000000000000000
+          0000000000000000002200000003000000610900000000000000000000000000
+          0000000000463320D3E4E0EBE8F2FC1800000001000000660900000600000000
+          00000000000000000000001D0000003C0000006C090000010000000000000000
+          0000001901040046616C736518000000050000006C0900000000000000000000
+          0000000000000000200000003C0301006D090000FFFFFFFF0000000000000000
+          0B001E0053657453746174651E0000003C000000760900000100000000000000
+          00000000A902040062746E5F4634180000000500000076090000000000000000
+          0000000000000000000026000000030000009009000000000000000000000000
+          000000000000463420CDEEE2FBE920EFEEE8F1EA180000000100000092090000
+          060000000000000000000000000000001C0000003C0000009809000001000000
+          0000000000000000150104005472756518000000050000009809000000000000
+          000000000000000000000000200000003C03010099090000FFFFFFFF00000000
+          000000000B001E0053657453746174651E0000003C000000A209000001000000
+          00000000000000009102040062746E5F46351800000005000000A20900000000
+          00000000000000000000000000001A00000003000000B0090000000000000000
+          0000000000000000000046351800000001000000B60900000600000000000000
+          00000000000000001D0000003C000000BC090000010000000000000000000000
+          1901040046616C73651800000005000000BC0900000000000000000000000000
+          0000000000200000003C030100BD090000FFFFFFFF00000000000000000B001E
+          0053657453746174651E0000003C000000C60900000100000000000000000000
+          009502040062746E5F46361800000005000000C6090000000000000000000000
+          000000000000001A00000003000000D409000000000000000000000000000000
+          00000046361800000001000000D6090000060000000000000000000000000000
+          001D0000003C000000DC0900000100000000000000000000001901040046616C
+          73651800000005000000DC090000000000000000000000000000000000002000
+          00003C030100DD090000FFFFFFFF00000000000000000B001E00536574537461
+          74651E0000003C000000E6090000010000000000000000000000990204006274
+          6E5F46371800000005000000E609000000000000000000000000000000000000
+          1A00000003000000F40900000000000000000000000000000000000046371800
+          000001000000F7090000060000000000000000000000000000001D0000003C00
+          0000FD0900000100000000000000000000001901040046616C73651800000005
+          000000FD09000000000000000000000000000000000000200000003C030100FE
+          090000FFFFFFFF00000000000000000B001E0053657453746174651E0000003C
+          000000070A00000100000000000000000000009D02040062746E5F4638180000
+          0005000000070A0000000000000000000000000000000000001A000000030000
+          00150A0000000000000000000000000000000000004638180000000100000018
+          0A0000060000000000000000000000000000001D0000003C0000001E0A000001
+          00000000000000000000001901040046616C736518000000050000001E0A0000
+          00000000000000000000000000000000200000003C0301001F0A0000FFFFFFFF
+          00000000000000000B001E0053657453746174651E0000003C000000280A0000
+          010000000000000000000000A502040062746E5F46391800000005000000280A
+          00000000000000000000000000000000000021000000030000003D0A00000000
+          0000000000000000000000000000463920CFE5F7E0F2FC180000000100000043
+          0A0000060000000000000000000000000000001C0000003C000000490A000001
+          000000000000000000000015010400547275651800000005000000490A000000
+          000000000000000000000000000000200000003C0301004A0A0000FFFFFFFF00
+          000000000000000B001E0053657453746174651F0000003C000000540A000001
+          0000000000000000000000A102040062746E5F4631301800000005000000540A
+          0000000000000000000000000000000000002100000003000000690A00000000
+          000000000000000000000000000046313020C2FBF5EEE418000000010000006E
+          0A0000060000000000000000000000000000001C0000003C000000730A000001
+          000000000000000000000015010400547275651800000005000000730A000000
+          000000000000000000000000000000200000003C030100740A0000FFFFFFFF00
+          000000000000000B001E0053657453746174651E000000310000007C0A000000
+          000000000000000000000000000000526573756C74180000003A0000007C0A00
+          0000000000000000000000000000000000}
+      end
+      item
+        Description = 'frmDesigned_4OnFormCreate'
+        LogicText = 
+          '//FormMode:=fmNormal;'#13#10'FormMode:=fmReadOnly;'#13#10'btn_F10.tag:=1;'#13#10'E' +
+          'xecute('#39'SetStatusKey'#39');'#13#10#13#10
+        Params = <>
+        PCode = {
+          617450617363616C2045786563757461626C652046696C651A04970100000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000001C000000000000001800000001000000000000000000000000000000
+          4D41494E220000003C0000002B00000001000000000000000000000035010400
+          666D526561644F6E6C7918000000050000002B00000000000000000000000000
+          000000000000200000003CFF00001F0000000200000000000000000000005200
+          0800466F726D4D6F646518000000010000003C00000001000000000000000000
+          0000000000001F0000003C00000035000000010000000000000000000000A102
+          040062746E5F4631301800000005000000350000000000000000000000000000
+          00000000001B0000003CFF000039000000FFFFFFFF0000000000000000D2001E
+          0074616724000000030000005500000000000000000000000000000000000000
+          5365745374617475734B65791F0000003C010100560000000100000000000000
+          000000000F010400457865637574651E000000310000005B0000000000000000
+          0000000000000000000000526573756C74180000003A0000005B000000000000
+          00000000000000000000000000}
+      end>
+    _Template = False
+  end
+  object TDSPanel1: TDSPanel
+    Left = 0
+    Top = 0
+    Width = 792
+    Height = 25
+    Align = alTop
+    Caption = 'TDSPanel1'
+    TabOrder = 3
+    ShortCut = 0
+    object btn_F1: TDSFlatButton
+      Tag = 1
+      Left = 5
+      Top = 2
+      Width = 98
+      Height = 21
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F1 '#1055#1086#1084#1086#1096#1100
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F1 '#1055#1086#1084#1086#1096#1100
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F1 '#1055#1086#1084#1086#1096#1100
+      TabOrder = 0
+      _CheckLogicDescrs.Strings = (
+        'CheckDate2')
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      _OnClick = 'btn_F1OnClick'
+      ShortCut = 0
+      _FormParams = <>
+    end
+    object btn_F2: TDSFlatButton
+      Tag = 1
+      Left = 103
+      Top = 2
+      Width = 98
+      Height = 21
+      Hint = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1076#1072#1085#1085#1099#1077
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F2 '#1053#1086#1074#1072#1103
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F2 '#1053#1086#1074#1072#1103
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F2 '#1053#1086#1074#1072#1103
+      TabOrder = 1
+      _CheckLogicDescrs.Strings = (
+        'CheckDate1'
+        'CheckDate2'
+        'CheckDate3'
+        'CheckDate4'
+        'CheckDate5'
+        'CheckDate6'
+        'CheckDate7'
+        'CheckDate8'
+        'CheckDate9'
+        'CheckDate10'
+        'CheckDate11'
+        'CheckDate12'
+        'CheckDate13'
+        'CheckDate14'
+        'CheckDate15'
+        'CheckDates'
+        'CheckFieldR4'
+        'CheckFieldR10'
+        'CheckFieldR11'
+        'CheckFieldR17.1'
+        'MasterSlaveR4'
+        'MasterSlaveR5'
+        'MasterSlaveR17'
+        'CheckReq')
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      _OnClick = 'btn_F2OnClick'
+      ShortCut = 113
+      _FormParams = <>
+    end
+    object btn_F3: TDSFlatButton
+      Tag = 1
+      Left = 201
+      Top = 2
+      Width = 98
+      Height = 21
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F3 '#1050#1086#1085#1090#1088#1086#1083#1100
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F3 '#1050#1086#1085#1090#1088#1086#1083#1100
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F3 '#1050#1086#1085#1090#1088#1086#1083#1100
+      TabOrder = 2
+      _CheckLogicDescrs.Strings = (
+        'CheckDateIsValid1'
+        'CheckDateIsValid2'
+        'Sub2_1'
+        'Sub2_2'
+        'Sub2_3'
+        'Sub2_4'
+        'Sub2_5'
+        'Sub2_6'
+        'CheckDate1'
+        'CheckDate2'
+        'CheckDate3'
+        'CheckDate4'
+        'CheckDate5'
+        'CheckDate6'
+        'CheckDate7'
+        'CheckDate8'
+        'CheckDate9'
+        'CheckDate10'
+        'CheckDate11'
+        'CheckDate13'
+        'CheckDate14'
+        'CheckDate15'
+        'CheckDate18'
+        'CheckFieldR4'
+        'CheckFieldR10'
+        'CheckFieldR11'
+        'CheckFieldR17.1'
+        'MasterSlaveR4'
+        'MasterSlaveR5'
+        'MasterSlaveR17'
+        'CheckDates'
+        'CheckDate9'
+        'CheckDate12')
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      _OnClick = 'btn_F3OnClick'
+      ShortCut = 114
+      _FormParams = <>
+    end
+    object btn_F5: TDSFlatButton
+      Tag = 1
+      Left = 397
+      Top = 2
+      Width = 48
+      Height = 21
+      Hint = #1055#1077#1088#1077#1081#1090#1080' '#1085#1072' '#1087#1077#1088#1074#1091#1102' '#1079#1072#1087#1080#1089#1100
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        040000000000800000000000000000000000100000001000000000000000C6C6
+        C600FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00111111111111
+        1111111111111111111111111111111111111110011111101111111001111100
+        1111111001111000111111100111000011111110011000001111111001000000
+        1111111001100000111111100111000011111110011110001111111001111100
+        1111111001111110111111111111111111111111111111111111}
+      ActiveState.Caption = 'F5'
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        040000000000800000000000000000000000100000001000000000000000C6C6
+        C600FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00111111111111
+        1111111111111111111111111111111111111110011111101111111001111100
+        1111111001111000111111100111000011111110011000001111111001000000
+        1111111001100000111111100111000011111110011110001111111001111100
+        1111111001111110111111111111111111111111111111111111}
+      InActiveState.Caption = 'F5'
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F5'
+      Enabled = False
+      TabOrder = 3
+      _ButtonMode = [bmDataManage]
+      _DataSetManage = dmFirst
+      _FormManage = fmgNone
+      ShortCut = 116
+      _FormParams = <>
+    end
+    object btn_F6: TDSFlatButton
+      Tag = 1
+      Left = 445
+      Top = 2
+      Width = 48
+      Height = 21
+      Hint = #1055#1077#1088#1077#1081#1090#1080' '#1085#1072' '#1087#1088#1077#1076#1099#1076#1091#1097#1091#1102' '#1079#1072#1087#1080#1089#1100
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        040000000000800000000000000000000000100000001000000000000000C6C6
+        C600FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00111111111111
+        1111111111111111111111111111111111111111111111011111111111111001
+        1111111111110001111111111110000111111111110000011111111110000001
+        1111111111000001111111111110000111111111111100011111111111111001
+        1111111111111101111111111111111111111111111111111111}
+      ActiveState.Caption = 'F6'
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Glyph.Data = {
+        F6000000424DF600000000000000760000002800000010000000100000000100
+        040000000000800000000000000000000000100000001000000000000000C6C6
+        C600FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00111111111111
+        1111111111111111111111111111111111111111111111011111111111111001
+        1111111111110001111111111110000111111111110000011111111110000001
+        1111111111000001111111111110000111111111111100011111111111111001
+        1111111111111101111111111111111111111111111111111111}
+      InActiveState.Caption = 'F6'
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F6'
+      Enabled = False
+      TabOrder = 4
+      _ButtonMode = [bmDataManage]
+      _DataSetManage = dmPrior
+      _FormManage = fmgNone
+      ShortCut = 117
+      _FormParams = <>
+    end
+    object btn_F7: TDSFlatButton
+      Tag = 1
+      Left = 493
+      Top = 2
+      Width = 48
+      Height = 21
+      Hint = #1055#1077#1088#1077#1081#1090#1080' '#1085#1072' '#1089#1083#1077#1076#1091#1102#1097#1091#1102' '#1079#1072#1087#1080#1089#1100
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888888878888888888888807788888888888880077888888888888000778
+        8888888888000077888888888800000778888888880000007888888888000008
+        8888888888000088888888888800088888888888880088888888888888088888
+        888888888888888888888888888888888888}
+      ActiveState.Caption = 'F7'
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Glyph.Data = {
+        EE000000424DEE000000000000007600000028000000100000000F0000000100
+        0400000000007800000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888888878888888888888807788888888888880077888888888888000778
+        8888888888000077888888888800000778888888880000007888888888000008
+        8888888888000088888888888800088888888888880088888888888888088888
+        888888888888888888888888888888888888}
+      InActiveState.Caption = 'F7'
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F7'
+      Enabled = False
+      TabOrder = 5
+      _ButtonMode = [bmDataManage]
+      _DataSetManage = dmNext
+      _FormManage = fmgNone
+      ShortCut = 118
+      _FormParams = <>
+    end
+    object btn_F8: TDSFlatButton
+      Tag = 1
+      Left = 541
+      Top = 2
+      Width = 48
+      Height = 21
+      Hint = #1055#1077#1088#1077#1081#1090#1080' '#1085#1072' '#1087#1086#1089#1083#1077#1076#1085#1102#1102' '#1079#1072#1087#1080#1089#1100
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Glyph.Data = {
+        26050000424D26050000000000003604000028000000100000000F0000000100
+        080000000000F000000000000000000000000001000000010000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000080000000
+        8000000080000000800000008000000080000000800000008000000080000000
+        8000000080000000800000008000000080000000800000008000008000000080
+        0000008000000080000000800000008000000080000000800000008000000080
+        0000008000000080000000800000008000000080000000800000008080000080
+        8000008080000080800000808000008080000080800000808000008080000080
+        8000008080000080800000808000008080000080800000808000800000008000
+        0000800000008000000080000000800000008000000080000000800000008000
+        0000800000008000000080000000800000008000000080000000800080008000
+        8000800080008000800080008000800080008000800080008000800080008000
+        8000800080008000800080008000800080008000800080008000808000008080
+        0000808000008080000080800000808000008080000080800000808000008080
+        0000808000008080000080800000808000008080000080800000808080008080
+        8000808080008080800080808000808080008080800080808000808080008080
+        8000808080008080800080808000808080008080800080808000C0C0C000C0C0
+        C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+        C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000FF000000
+        FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000
+        FF000000FF000000FF000000FF000000FF000000FF000000FF0000FF000000FF
+        000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF
+        000000FF000000FF000000FF000000FF000000FF000000FF000000FFFF0000FF
+        FF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FF
+        FF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF00FF000000FF00
+        0000FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF00
+        0000FF000000FF000000FF000000FF000000FF000000FF000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FFFF0000FFFF
+        0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF
+        0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00888888888888
+        8888888888888888888088888877888888888888887777888880888800777788
+        8888888800007788888088880000777788888888000077888880888800000077
+        7788888800007788888088880000000077778888000077888880888800000000
+        0077778800007788888088880000000000008888000077888880888800000000
+        0088888800007788888088880000000088888888000077888880888800000088
+        8888888800007788888088880000888888888888000077888880888800888888
+        8888888800008888888088888888888888888888888888888880888888888888
+        88888888888888888880}
+      ActiveState.Caption = 'F8'
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Glyph.Data = {
+        26050000424D26050000000000003604000028000000100000000F0000000100
+        080000000000F000000000000000000000000001000000010000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000080000000
+        8000000080000000800000008000000080000000800000008000000080000000
+        8000000080000000800000008000000080000000800000008000008000000080
+        0000008000000080000000800000008000000080000000800000008000000080
+        0000008000000080000000800000008000000080000000800000008080000080
+        8000008080000080800000808000008080000080800000808000008080000080
+        8000008080000080800000808000008080000080800000808000800000008000
+        0000800000008000000080000000800000008000000080000000800000008000
+        0000800000008000000080000000800000008000000080000000800080008000
+        8000800080008000800080008000800080008000800080008000800080008000
+        8000800080008000800080008000800080008000800080008000808000008080
+        0000808000008080000080800000808000008080000080800000808000008080
+        0000808000008080000080800000808000008080000080800000808080008080
+        8000808080008080800080808000808080008080800080808000808080008080
+        8000808080008080800080808000808080008080800080808000C0C0C000C0C0
+        C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0
+        C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C000C0C0C0000000FF000000
+        FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000
+        FF000000FF000000FF000000FF000000FF000000FF000000FF0000FF000000FF
+        000000FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF
+        000000FF000000FF000000FF000000FF000000FF000000FF000000FFFF0000FF
+        FF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FF
+        FF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF00FF000000FF00
+        0000FF000000FF000000FF000000FF000000FF000000FF000000FF000000FF00
+        0000FF000000FF000000FF000000FF000000FF000000FF000000FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00
+        FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FF00FFFF0000FFFF
+        0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF
+        0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFF0000FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+        FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00888888888888
+        8888888888888888888088888877888888888888887777888880888800777788
+        8888888800007788888088880000777788888888000077888880888800000077
+        7788888800007788888088880000000077778888000077888880888800000000
+        0077778800007788888088880000000000008888000077888880888800000000
+        0088888800007788888088880000000088888888000077888880888800000088
+        8888888800007788888088880000888888888888000077888880888800888888
+        8888888800008888888088888888888888888888888888888880888888888888
+        88888888888888888880}
+      InActiveState.Caption = 'F8'
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F8'
+      Enabled = False
+      TabOrder = 6
+      _ButtonMode = [bmDataManage]
+      _DataSetManage = dmLast
+      _FormManage = fmgNone
+      ShortCut = 119
+      _FormParams = <>
+    end
+    object btn_F10: TDSFlatButton
+      Tag = 1
+      Left = 689
+      Top = 2
+      Width = 98
+      Height = 21
+      Hint = #1054#1073#1085#1086#1074#1080#1090#1100' '#1076#1072#1085#1085#1099#1077
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F10 '#1042#1099#1093#1086#1076
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F10 '#1042#1099#1093#1086#1076
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F10 '#1042#1099#1093#1086#1076
+      TabOrder = 7
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      _OnClick = 'btn_F10OnClick'
+      ShortCut = 121
+      _FormParams = <>
+    end
+    object btn_F9: TDSFlatButton
+      Tag = 1
+      Left = 589
+      Top = 2
+      Width = 100
+      Height = 21
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F9 '#1055#1077#1095#1072#1090#1100
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F9 '#1055#1077#1095#1072#1090#1100
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F9 '#1055#1077#1095#1072#1090#1100
+      Enabled = False
+      TabOrder = 8
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      ShortCut = 0
+      _FormParams = <>
+    end
+    object btn_F4: TDSFlatButton
+      Tag = 1
+      Left = 299
+      Top = 2
+      Width = 98
+      Height = 21
+      Hint = #1044#1086#1073#1072#1074#1080#1090#1100' '#1085#1086#1074#1091#1102' '#1079#1072#1087#1080#1089#1100
+      ActiveState.Font.Charset = DEFAULT_CHARSET
+      ActiveState.Font.Color = clWindowText
+      ActiveState.Font.Height = -11
+      ActiveState.Font.Name = 'MS Sans Serif'
+      ActiveState.Font.Style = []
+      ActiveState.FontColor = clMaroon
+      ActiveState.Color = 16759225
+      ActiveState.Caption = 'F4 '#1055#1086#1080#1089#1082
+      ActiveState.ColorsKind = dcColor_2
+      InActiveState.Font.Charset = DEFAULT_CHARSET
+      InActiveState.Font.Color = clWindowText
+      InActiveState.Font.Height = -11
+      InActiveState.Font.Name = 'MS Sans Serif'
+      InActiveState.Font.Style = []
+      InActiveState.FontColor = clBtnText
+      InActiveState.Color = clBtnFace
+      InActiveState.Caption = 'F4 '#1055#1086#1080#1089#1082
+      InActiveState.ColorsKind = dcDefault
+      Caption = 'F4 '#1055#1086#1080#1089#1082
+      TabOrder = 9
+      _ButtonMode = []
+      _DataSetManage = dmNone
+      _FormManage = fmgNone
+      _OnClick = 'btn_F4OnClick'
+      ShortCut = 115
+      _FormParams = <>
+    end
+  end
+end
