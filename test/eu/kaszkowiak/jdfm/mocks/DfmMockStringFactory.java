@@ -1,6 +1,25 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * The MIT License
+ *
+ * Copyright 2014 Krzysztof Kaszkowiak.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 package eu.kaszkowiak.jdfm.mocks;
 
@@ -9,6 +28,283 @@ package eu.kaszkowiak.jdfm.mocks;
  * @author Krzysztof
  */
 public class DfmMockStringFactory {
+    
+    public static String getDfmWithGlyphData() {
+        return "object frmDesigned: TfrmDesigned\n" +
+                "  Left = 270\n" +
+                "  Top = 94\n" +
+                "  Width = 537\n" +
+                "  Height = 538\n" +
+                "  Cursor = crArrow\n" +
+                "  VertScrollBar.ParentColor = False\n" +
+                "  KeyPreview = True\n" +
+                "  OldCreateOrder = False\n" +
+                "  OnActivate = FormActivate\n" +
+                "  OnClose = FormClose\n" +
+                "  OnCreate = FormCreate\n" +
+                "  OnDestroy = FormDestroy\n" +
+                "  OnKeyDown = FormKeyDown\n" +
+                "  OnKeyPress = FormKeyPress\n" +
+                "  OnResize = FormResize\n" +
+                "  OnShow = FormShow\n" +
+                "  Caption = #1060'.'#1047#1057'1'\n" +
+                "  Color = clBtnFace\n" +
+                "  Font.Charset = DEFAULT_CHARSET\n" +
+                "  Font.Color = clWindowText\n" +
+                "  Font.Height = -11\n" +
+                "  Font.Name = 'Tahoma'\n" +
+                "  Font.Style = []\n" +
+                "  OnDragOver = FormDragOver\n" +
+                "  _AttribsInfo = <>\n" +
+                "  _ClassCodeName = 'EZS1'\n" +
+                "  _ClassLongName = #1060'.'#1047#1057'1'\n" +
+                "  _ClassType = 'R'\n" +
+                "  _MethodCodeName = 'S645087'\n" +
+                "  _MethodLongName = #1052#1077#1090#1086#1076' '#1069#1060\n" +
+                "  _CurrentLanguage = 'RUSSIAN'\n" +
+                "  _GradientCaption = False\n" +
+                "  ShowMessNotFind = True\n" +
+                "  PacketRecords = 200\n" +
+                "  PixelsPerInch = 96\n" +
+                "  TextHeight = 13\n" +
+                "  object TDSLabel1: TDSLabel\n" +
+                "    Left = 280\n" +
+                "    Top = 48\n" +
+                "    Width = 62\n" +
+                "    Height = 13\n" +
+                "    Caption = 'TDSScrollBox'\n" +
+                "  end\n" +
+                "  object TDSLabel2: TDSLabel\n" +
+                "    Left = 280\n" +
+                "    Top = 80\n" +
+                "    Width = 65\n" +
+                "    Height = 13\n" +
+                "    Caption = 'TDSImageList'\n" +
+                "  end\n" +
+                "  object TDSLabel3: TDSLabel\n" +
+                "    Left = 256\n" +
+                "    Top = 144\n" +
+                "    Width = 89\n" +
+                "    Height = 13\n" +
+                "    Caption = 'TDSDataNavigator'\n" +
+                "  end\n" +
+                "  object TDSLabel4: TDSLabel\n" +
+                "    Left = 312\n" +
+                "    Top = 176\n" +
+                "    Width = 43\n" +
+                "    Height = 13\n" +
+                "    Caption = 'TDSPage'\n" +
+                "  end\n" +
+                "  object TDSLabel5: TDSLabel\n" +
+                "    Left = 332\n" +
+                "    Top = 191\n" +
+                "    Width = 71\n" +
+                "    Height = 13\n" +
+                "    Caption = '|--DSTabSheet'\n" +
+                "  end\n" +
+                "  object TDSLabel7: TDSLabel\n" +
+                "    Left = 392\n" +
+                "    Top = 360\n" +
+                "    Width = 50\n" +
+                "    Height = 13\n" +
+                "    Caption = 'TDSLabel7'\n" +
+                "  end\n" +
+                "  object TDSScrollBox1: TDSScrollBox\n" +
+                "    Left = 8\n" +
+                "    Top = 24\n" +
+                "    Width = 185\n" +
+                "    Height = 41\n" +
+                "    BorderStyle = bsNone\n" +
+                "    TabOrder = 1\n" +
+                "    ShortCut = 0\n" +
+                "    object TDSPanel1: TDSPanel\n" +
+                "      Left = 0\n" +
+                "      Top = 8\n" +
+                "      Width = 185\n" +
+                "      Height = 41\n" +
+                "      Caption = 'TDSPanel1'\n" +
+                "      TabOrder = 0\n" +
+                "      ShortCut = 0\n" +
+                "    end\n" +
+                "  end\n" +
+                "  object TDSImageList1: TDSImageList\n" +
+                "    Left = 8\n" +
+                "    Top = 72\n" +
+                "    Width = 24\n" +
+                "    Height = 24\n" +
+                "    ImageHeight = 16\n" +
+                "    ImageWidth = 16\n" +
+                "  end\n" +
+                "  object TDSSimpleCheckBox1: TDSSimpleCheckBox\n" +
+                "    Left = 8\n" +
+                "    Top = 104\n" +
+                "    Width = 281\n" +
+                "    Height = 17\n" +
+                "    Caption = 'TDSSimpleCheckBox'\n" +
+                "    TabOrder = 3\n" +
+                "  end\n" +
+                "  object TDSDataNavigator1: TDSDataNavigator\n" +
+                "    Left = 8\n" +
+                "    Top = 136\n" +
+                "    Width = 227\n" +
+                "    Height = 25\n" +
+                "  end\n" +
+                "  object TDSPageControl1: TDSPageControl\n" +
+                "    Left = 8\n" +
+                "    Top = 176\n" +
+                "    Width = 289\n" +
+                "    Height = 113\n" +
+                "    ActivePage = DSTabSheet1\n" +
+                "    TabIndex = 0\n" +
+                "    TabOrder = 5\n" +
+                "    ActivePageIndex = 0\n" +
+                "    PagesCount = 1\n" +
+                "    object DSTabSheet1: TDSTabSheet\n" +
+                "      Caption = 'DSTabSheet1'\n" +
+                "      ShortCut = 0\n" +
+                "    end\n" +
+                "  end\n" +
+                "  object TDSFlatButton1: TDSFlatButton\n" +
+                "    Left = 8\n" +
+                "    Top = 304\n" +
+                "    Width = 120\n" +
+                "    Height = 41\n" +
+                "    ActiveState.Font.Charset = DEFAULT_CHARSET\n" +
+                "    ActiveState.Font.Color = clWindowText\n" +
+                "    ActiveState.Font.Height = -11\n" +
+                "    ActiveState.Font.Name = 'Tahoma'\n" +
+                "    ActiveState.Font.Style = []\n" +
+                "    ActiveState.FontColor = clMaroon\n" +
+                "    ActiveState.Color = 16759225\n" +
+                "    ActiveState.Caption = 'TDSFlatButton'\n" +
+                "    ActiveState.ColorsKind = dcColor_2\n" +
+                "    InActiveState.Font.Charset = DEFAULT_CHARSET\n" +
+                "    InActiveState.Font.Color = clWindowText\n" +
+                "    InActiveState.Font.Height = -11\n" +
+                "    InActiveState.Font.Name = 'Tahoma'\n" +
+                "    InActiveState.Font.Style = []\n" +
+                "    InActiveState.FontColor = clBtnText\n" +
+                "    InActiveState.Color = clBtnFace\n" +
+                "    InActiveState.Caption = 'TDSFlatButton'\n" +
+                "    InActiveState.ColorsKind = dcDefault\n" +
+                "    Caption = 'TDSFlatButton'\n" +
+                "    TabOrder = 6\n" +
+                "    _ButtonMode = []\n" +
+                "    _DataSetManage = dmNone\n" +
+                "    _FormManage = fmgNone\n" +
+                "    ShortCut = 0\n" +
+                "    _FormParams = <>\n" +
+                "    _ShowMod = False\n" +
+                "  end\n" +
+                "  object TDSGroupBox1: TDSGroupBox\n" +
+                "    Left = 8\n" +
+                "    Top = 352\n" +
+                "    Width = 185\n" +
+                "    Height = 49\n" +
+                "    Caption = 'TDSGroupBox1'\n" +
+                "    TabOrder = 7\n" +
+                "    ShortCut = 0\n" +
+                "  end\n" +
+                "  object TDSPanel2: TDSPanel\n" +
+                "    Left = 136\n" +
+                "    Top = 303\n" +
+                "    Width = 185\n" +
+                "    Height = 41\n" +
+                "    Caption = 'TDSPanel'\n" +
+                "    TabOrder = 8\n" +
+                "    ShortCut = 0\n" +
+                "  end\n" +
+                "  object TDSCodeEdit1: TDSCodeEdit\n" +
+                "    Left = 80\n" +
+                "    Top = 416\n" +
+                "    Width = 200\n" +
+                "    Height = 18\n" +
+                "    AColor = clInfoBk\n" +
+                "    AutoSave = True\n" +
+                "    EAColor = False\n" +
+                "    ELangType = False\n" +
+                "    HotTrack = True\n" +
+                "    LangType = ltRusLang\n" +
+                "    _AttribsInfo = <>\n" +
+                "    _IsDBComponent = False\n" +
+                "    Caption.Alignment = taLeftJustify\n" +
+                "    Caption.Font.Charset = DEFAULT_CHARSET\n" +
+                "    Caption.Font.Color = clWindowText\n" +
+                "    Caption.Font.Height = -11\n" +
+                "    Caption.Font.Name = 'Tahoma'\n" +
+                "    Caption.Font.Style = [fsBold]\n" +
+                "    Caption.Caption = 'TDSCodeEdit'\n" +
+                "    Caption.Width = 71\n" +
+                "    Caption.Height = 13\n" +
+                "    Caption.Position = lpLeft\n" +
+                "    Caption.Indent = 0\n" +
+                "    Caption.Visible = True\n" +
+                "    Caption.ParentFont = False\n" +
+                "    Caption.WordWrap = False\n" +
+                "    CodeButton.Flat = True\n" +
+                "    CodeButton.ShowHint = False\n" +
+                "    CodeButton.Glyph.Data = {\n" +
+                "      D6000000424DD60000000000000076000000280000000F0000000C0000000100\n" +
+                "      0400000000006000000000000000000000001000000000000000000000000000\n" +
+                "      8000008000000080800080000000800080008080000080808000C0C0C0000000\n" +
+                "      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF\n" +
+                "      FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFF1FFFFFFF0FFFFFF111FFF\n" +
+                "      FFF0FFFFF11111FFFFF0FFFF1111111FFFF0FFF111111111FFF0FFFFFFFFFFFF\n" +
+                "      FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0}\n" +
+                "    CodeButton.Width = 17\n" +
+                "    CodeButton.Align = balRight\n" +
+                "    CodeButton.Visible = True\n" +
+                "    CodeButton.Cursor = crHandPoint\n" +
+                "    CodePart.Width = 40\n" +
+                "    CodePart.MinSize = 40\n" +
+                "    CodePart.Visible = True\n" +
+                "    ItemIndex = -1\n" +
+                "    ParentColor = False\n" +
+                "    DropCount = 8\n" +
+                "    DropWidth = 200\n" +
+                "    Color = clBtnFace\n" +
+                "    DropAlign = balRight\n" +
+                "    ReadOnly = False\n" +
+                "    TabOrder = 9\n" +
+                "    ActiveColor = 14811135\n" +
+                "    Frame = flBottom\n" +
+                "    ShortCut = 0\n" +
+                "    _Duplciate = False\n" +
+                "    DictCash = True\n" +
+                "    _Data = ''\n" +
+                "  end\n" +
+                "  object TDSUniversalEdit1: TDSUniversalEdit\n" +
+                "    Left = 155\n" +
+                "    Top = 449\n" +
+                "    Width = 121\n" +
+                "    Height = 19\n" +
+                "    Ctl3D = False\n" +
+                "    ParentCtl3D = False\n" +
+                "    TabOrder = 10\n" +
+                "    Caption.Alignment = taLeftJustify\n" +
+                "    Caption.Font.Charset = DEFAULT_CHARSET\n" +
+                "    Caption.Font.Color = clWindowText\n" +
+                "    Caption.Font.Height = -11\n" +
+                "    Caption.Font.Name = 'Tahoma'\n" +
+                "    Caption.Font.Style = [fsBold]\n" +
+                "    Caption.Caption = 'TDSUniversalEdit'\n" +
+                "    Caption.Width = 96\n" +
+                "    Caption.Height = 13\n" +
+                "    Caption.Position = lpLeft\n" +
+                "    Caption.Visible = True\n" +
+                "    Caption.ParentFont = False\n" +
+                "    Caption.WordWrap = False\n" +
+                "    EditStyle = esCustom\n" +
+                "    Frame = flBottom\n" +
+                "    TrimChar = ' '\n" +
+                "    Decimal = 0\n" +
+                "    _IsDBComponent = False\n" +
+                "    Color = clBtnFace\n" +
+                "    ShortCut = 0\n" +
+                "    _Duplciate = False\n" +
+                "  end\n" +
+                "end";
+    }
     
     public static String getDfmStringCorrect() {
         return  "object Form2: TForm2\n" +

@@ -21,35 +21,54 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package eu.kaszkowiak.jdfm.model;
+
+import javax.xml.bind.DatatypeConverter;
 
 /**
  *
  * @author Krzysztof Kaszkowiak
  */
-public abstract class DfmProperty {
+public class DfmByteArrayProperty extends DfmProperty {
     
+    
+    private final int LINE_LENGTH_IN_BYTES = 32;
+    
+    private byte[] value;
+    
+    public DfmByteArrayProperty(String name, String valueStringRepresentation) {
+        super(name, valueStringRepresentation);
+    }
+    
+    public DfmByteArrayProperty() { }
+
     @Override
-    public abstract String toString();
-    
-    public abstract void convertFromString(String stringValue);
-    
-    public DfmProperty() {}
-    
-    public DfmProperty(String name, String valueStringRepresentation) {
-        setName(name);
-        convertFromString(valueStringRepresentation);
+    public String toString() {
+        StringBuilder result = new StringBuilder(getName())
+                                    .append(" = {\n");
+
+        String hexString = DatatypeConverter.printHexBinary(value);
+
+        int len = hexString.length();
+        for (int i = 0; i < len; i += LINE_LENGTH_IN_BYTES*2) {
+            result
+              .append("      ")
+              .append(hexString.substring(i, Math.min(len, i + LINE_LENGTH_IN_BYTES*2)).toUpperCase());
+            
+            if (i < hexString.length() - LINE_LENGTH_IN_BYTES*2 - 1) {
+                result.append("\n");
+            }
+            
+        }
+        result.append("}");
+        
+        return result.toString();
+    }
+
+    @Override
+    public void convertFromString(String stringValue) {
+        stringValue = stringValue.replaceAll("( |\t|\n|\\{|\\})", "");
+        value = DatatypeConverter.parseHexBinary(stringValue);
     }
     
-    private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }
