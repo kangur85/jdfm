@@ -21,35 +21,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package eu.kaszkowiak.jdfm.model;
 
 /**
  *
- * @author Krzysztof Kaszkowiak
+ * @author Krzysztof
  */
-public abstract class DfmProperty {
+public class DfmStringProperty extends DfmProperty {
+
+    private String value;
     
+    public DfmStringProperty(String name, String valueStringRepresentation) {
+        super(name, valueStringRepresentation);
+    }
+    
+    public DfmStringProperty() { }
+
     @Override
-    public abstract String toString();
-    
-    public abstract void convertFromString(String stringValue);
-    
-    public DfmProperty() {}
-    
-    public DfmProperty(String name, String valueStringRepresentation) {
-        setName(name);
-        convertFromString(valueStringRepresentation);
-    }
-    
-    private String name;
-
-    public String getName() {
-        return name;
+    public String toString() {
+        return getName() + " = " + getValue();
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void convertFromString(String stringValue) {
+        value = stringValue;
     }
 
+    /**
+     * @return the value
+     */
+    public String getValue() {
+        return value;
+    }
 }

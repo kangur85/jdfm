@@ -1,14 +1,37 @@
 options {
+
   JAVA_UNICODE_ESCAPE = true;
   ERROR_REPORTING = true;
   STATIC = false;
   JDK_VERSION = "1.5";
   BUILD_PARSER = true;
-  IGNORE_CASE = true;
 }
 
 PARSER_BEGIN(DfmParser)
 
+/*
+ * The MIT License
+ *
+ * Copyright 2014 Krzysztof Kaszkowiak.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 package eu.kaszkowiak.jdfm.parser;
 
 import java.io.Reader;
@@ -18,8 +41,8 @@ import eu.kaszkowiak.jdfm.model.*;
 public class DfmParser {
 
      public DfmParser(String source) {
-        this((Reader)(new StringReader(source))); 
-    }  
+        this((Reader)(new StringReader(source)));
+    }
 }
 PARSER_END(DfmParser)
 
@@ -28,60 +51,50 @@ MORE : { < "'" >  : IN_STRING_SQ }
 <IN_STRING_SQ> MORE : { < ~["'"] >  }
 <IN_STRING_SQ> TOKEN : { < STRING_SQ : "'" >  : DEFAULT }
 
-MORE : { < "(" >  : IN_BRACKETS }
-<IN_BRACKETS> MORE : { < ~[")"] >  }
-<IN_BRACKETS> TOKEN : { < BRACKETS : ")" >  : DEFAULT }
+MORE : { < "(" >  : IN_PARENS }
+<IN_PARENS> MORE : { < ~[")"] >  }
+<IN_PARENS> TOKEN : { < PARENS : ")" >  : DEFAULT }
 
+MORE : { < "[" >  : IN_BRACKETS }
+<IN_BRACKETS> MORE : { < ~["]"] >  }
+<IN_BRACKETS> TOKEN : { < BRACKETS : "]" >  : DEFAULT }
 
-MORE : { < "[" >  : IN_KW_BRACKETS }
-<IN_KW_BRACKETS> MORE : { < ~["]"] >  }
-<IN_KW_BRACKETS> TOKEN : { < KW_BRACKETS : "]" >  : DEFAULT }
+MORE : { < "<" >  : IN_CROCODILE_BRACKETS }
+<IN_CROCODILE_BRACKETS> MORE : { < ~[">"] >  }
+<IN_CROCODILE_BRACKETS> TOKEN : { < CROCODILE_BRACKETS : ">" >  : DEFAULT }
 
-
+MORE: { < "{" > : IN_HEX_DATA }
+<IN_HEX_DATA> MORE : { <(["A"-"F", "0"-"9", "\n", " ", "\t"])+>}
+<IN_HEX_DATA> TOKEN : { <HEX_DATA : "}"> : DEFAULT }
 
 SKIP :
 {
     <WHITESPACE :  ([" ", "\t"])+>
 }
 
-TOKEN: 
-{
-        <OBJECT: "object">
-    |   <END: "end">
-    |   <COLON: ":">
-    |   <ENDLINE: (["\r", "\n"])+>
-    |   <EQUAL: "=">
-}
-
 TOKEN:
 {
-    <IDENTIFIER : (["A"-"Z", "0"-"9", "a"-"z", "_", ".", "-", "#"])+ >
-}
-    
-
-private String string() :
-{
-  Token tStr;
-}
-{
-  tStr =<STRING_SQ> { return tStr.image; }
+        <EQUAL: "=">
+    |   <COLON: ":">
+    |   <END: "end">
+    |   <OBJECT: "object">
+    |   <ENDLINE: (["\r", "\n"])+>
+    |   <IDENTIFIER : (["A"-"Z", "0"-"9", "a"-"z", "_", ".", "-"])+ >
+    |   <HASH_STRING : ("#" (["0"-"9"])+)+>
 }
 
-
-DfmObject parse() throws ParseException:
+DfmObject parse():
 {
     DfmObject res;
 }
 {
     res=dfmObject()
     ( <ENDLINE> )*
-    <EOF>      
+    <EOF>
     { return res; }
 }
 
-
-
-private DfmObject dfmObject() throws ParseException:
+private DfmObject dfmObject():
 {
     DfmObject res = new DfmObject();
     DfmProperty prop;
@@ -90,67 +103,102 @@ private DfmObject dfmObject() throws ParseException:
     String type;
 }
 {
-    <OBJECT> 
-        name=identifier() { res.setName( name ); }
-        <COLON> 
-        type=type() { res.setType( type ); }
+    <OBJECT>
+        name=identifier() { res.setName( name ); } <COLON>
+        type=type()       { res.setType( type ); }
     <ENDLINE>
         (     (obj=dfmObject()   { res.addChild(obj);     } <ENDLINE>)
-            | (( prop=property() { res.addProperty(prop); }) )
+            | (prop=property()   { res.addProperty(prop); } )
         )+
-    <END> 
+    <END>
     { return res; }
 }
 
-private String identifier() throws ParseException:
+private String identifier():
 {
     Token tStr;
 }
 {
-    tStr = <IDENTIFIER> 
-    { 
+    tStr = <IDENTIFIER>
+    {
         return tStr.image;
     }
-    
+
 }
 
-private String type() throws ParseException:
+private String type():
 {
     Token tStr;
 }
 {
-    tStr = <IDENTIFIER> 
-    { 
+    tStr = <IDENTIFIER>
+    {
         return tStr.image;
     }
-    
+
 }
 
-private DfmProperty property() throws ParseException:
+private DfmProperty property():
 {
-    String tStr;
-    DfmProperty res = new DfmProperty();
-    String value;
+    String propertyName;
+    DfmProperty res;
 }
 {
-    tStr = identifier() 
-    { 
-        res.setName( tStr );
-    }
-    <EQUAL> 
-    (  (value = string() { res.setValue ( value ); })
-     | (tStr = propValue() { res.setValue ( tStr ); })
-    )+
-    <ENDLINE>
-    { return res; }
+    propertyName = identifier() <EQUAL>
+        (     (res = stringProperty()    )
+            | (res = unknownProperty()   )
+            | (res = byteArrayProperty() )
+        ) <ENDLINE>
+        {
+            res.setName(propertyName);
+            return res;
+        }
 }
 
-private String propValue() throws ParseException:
+private DfmStringProperty unknownProperty():
 {
-    String res;
     Token tStr;
+    DfmStringProperty res = new DfmStringProperty();
 }
 {
-    (( res = identifier() ) |  ((tStr = <BRACKETS>) | (tStr = <KW_BRACKETS>)){res = tStr.image;})
-    {return res;}
+    (
+          (tStr = <PARENS>)
+        | (tStr = <BRACKETS>)
+        | (tStr = <CROCODILE_BRACKETS>)
+        | (tStr = <IDENTIFIER>)
+    )
+    {
+        res.convertFromString(tStr.image);
+        return res;
+    }
+}
+
+private DfmStringProperty stringProperty():
+{
+    Token tStr;
+    DfmStringProperty res = new DfmStringProperty();
+    String resValue = "";
+}
+{
+    ((
+            (tStr = <STRING_SQ>)
+          | (tStr = <HASH_STRING>)
+    ){ resValue += tStr.image; })+
+    {
+        res.convertFromString(resValue);
+        return res;
+    }
+}
+
+private DfmByteArrayProperty byteArrayProperty():
+{
+    Token tStr;
+    DfmByteArrayProperty res = new DfmByteArrayProperty();
+}
+{
+    tStr = <HEX_DATA>
+    {
+        res.convertFromString(tStr.image);
+        return res;
+    }
 }
