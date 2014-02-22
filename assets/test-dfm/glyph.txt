@@ -1,0 +1,274 @@
+object frmDesigned: TfrmDesigned
+  Left = 270
+  Top = 94
+  Width = 537
+  Height = 538
+  Cursor = crArrow
+  VertScrollBar.ParentColor = False
+  KeyPreview = True
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnResize = FormResize
+  OnShow = FormShow
+  Caption = #1060'.'#1047#1057'1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OnDragOver = FormDragOver
+  _AttribsInfo = <>
+  _ClassCodeName = 'EZS1'
+  _ClassLongName = #1060'.'#1047#1057'1'
+  _ClassType = 'R'
+  _MethodCodeName = 'S645087'
+  _MethodLongName = #1052#1077#1090#1086#1076' '#1069#1060
+  _CurrentLanguage = 'RUSSIAN'
+  _GradientCaption = False
+  ShowMessNotFind = True
+  PacketRecords = 200
+  PixelsPerInch = 96
+  TextHeight = 13
+  object TDSLabel1: TDSLabel
+    Left = 280
+    Top = 48
+    Width = 62
+    Height = 13
+    Caption = 'TDSScrollBox'
+  end
+  object TDSLabel2: TDSLabel
+    Left = 280
+    Top = 80
+    Width = 65
+    Height = 13
+    Caption = 'TDSImageList'
+  end
+  object TDSLabel3: TDSLabel
+    Left = 256
+    Top = 144
+    Width = 89
+    Height = 13
+    Caption = 'TDSDataNavigator'
+  end
+  object TDSLabel4: TDSLabel
+    Left = 312
+    Top = 176
+    Width = 43
+    Height = 13
+    Caption = 'TDSPage'
+  end
+  object TDSLabel5: TDSLabel
+    Left = 332
+    Top = 191
+    Width = 71
+    Height = 13
+    Caption = '|--DSTabSheet'
+  end
+  object TDSLabel7: TDSLabel
+    Left = 392
+    Top = 360
+    Width = 50
+    Height = 13
+    Caption = 'TDSLabel7'
+  end
+  object TDSScrollBox1: TDSScrollBox
+    Left = 8
+    Top = 24
+    Width = 185
+    Height = 41
+    BorderStyle = bsNone
+    TabOrder = 1
+    ShortCut = 0
+    object TDSPanel1: TDSPanel
+      Left = 0
+      Top = 8
+      Width = 185
+      Height = 41
+      Caption = 'TDSPanel1'
+      TabOrder = 0
+      ShortCut = 0
+    end
+  end
+  object TDSImageList1: TDSImageList
+    Left = 8
+    Top = 72
+    Width = 24
+    Height = 24
+    ImageHeight = 16
+    ImageWidth = 16
+  end
+  object TDSSimpleCheckBox1: TDSSimpleCheckBox
+    Left = 8
+    Top = 104
+    Width = 281
+    Height = 17
+    Caption = 'TDSSimpleCheckBox'
+    TabOrder = 3
+  end
+  object TDSDataNavigator1: TDSDataNavigator
+    Left = 8
+    Top = 136
+    Width = 227
+    Height = 25
+  end
+  object TDSPageControl1: TDSPageControl
+    Left = 8
+    Top = 176
+    Width = 289
+    Height = 113
+    ActivePage = DSTabSheet1
+    TabIndex = 0
+    TabOrder = 5
+    ActivePageIndex = 0
+    PagesCount = 1
+    object DSTabSheet1: TDSTabSheet
+      Caption = 'DSTabSheet1'
+      ShortCut = 0
+    end
+  end
+  object TDSFlatButton1: TDSFlatButton
+    Left = 8
+    Top = 304
+    Width = 120
+    Height = 41
+    ActiveState.Font.Charset = DEFAULT_CHARSET
+    ActiveState.Font.Color = clWindowText
+    ActiveState.Font.Height = -11
+    ActiveState.Font.Name = 'Tahoma'
+    ActiveState.Font.Style = []
+    ActiveState.FontColor = clMaroon
+    ActiveState.Color = 16759225
+    ActiveState.Caption = 'TDSFlatButton'
+    ActiveState.ColorsKind = dcColor_2
+    InActiveState.Font.Charset = DEFAULT_CHARSET
+    InActiveState.Font.Color = clWindowText
+    InActiveState.Font.Height = -11
+    InActiveState.Font.Name = 'Tahoma'
+    InActiveState.Font.Style = []
+    InActiveState.FontColor = clBtnText
+    InActiveState.Color = clBtnFace
+    InActiveState.Caption = 'TDSFlatButton'
+    InActiveState.ColorsKind = dcDefault
+    Caption = 'TDSFlatButton'
+    TabOrder = 6
+    _ButtonMode = []
+    _DataSetManage = dmNone
+    _FormManage = fmgNone
+    ShortCut = 0
+    _FormParams = <>
+    _ShowMod = False
+  end
+  object TDSGroupBox1: TDSGroupBox
+    Left = 8
+    Top = 352
+    Width = 185
+    Height = 49
+    Caption = 'TDSGroupBox1'
+    TabOrder = 7
+    ShortCut = 0
+  end
+  object TDSPanel2: TDSPanel
+    Left = 136
+    Top = 303
+    Width = 185
+    Height = 41
+    Caption = 'TDSPanel'
+    TabOrder = 8
+    ShortCut = 0
+  end
+  object TDSCodeEdit1: TDSCodeEdit
+    Left = 80
+    Top = 416
+    Width = 200
+    Height = 18
+    AColor = clInfoBk
+    AutoSave = True
+    EAColor = False
+    ELangType = False
+    HotTrack = True
+    LangType = ltRusLang
+    _AttribsInfo = <>
+    _IsDBComponent = False
+    Caption.Alignment = taLeftJustify
+    Caption.Font.Charset = DEFAULT_CHARSET
+    Caption.Font.Color = clWindowText
+    Caption.Font.Height = -11
+    Caption.Font.Name = 'Tahoma'
+    Caption.Font.Style = [fsBold]
+    Caption.Caption = 'TDSCodeEdit'
+    Caption.Width = 71
+    Caption.Height = 13
+    Caption.Position = lpLeft
+    Caption.Indent = 0
+    Caption.Visible = True
+    Caption.ParentFont = False
+    Caption.WordWrap = False
+    CodeButton.Flat = True
+    CodeButton.ShowHint = False
+    CodeButton.Glyph.Data = {
+      D6000000424DD60000000000000076000000280000000F0000000C0000000100
+      0400000000006000000000000000000000001000000000000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+      FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFF1FFFFFFF0FFFFFF111FFF
+      FFF0FFFFF11111FFFFF0FFFF1111111FFFF0FFF111111111FFF0FFFFFFFFFFFF
+      FFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0FFFFFFFFFFFFFFF0}
+    CodeButton.Width = 17
+    CodeButton.Align = balRight
+    CodeButton.Visible = True
+    CodeButton.Cursor = crHandPoint
+    CodePart.Width = 40
+    CodePart.MinSize = 40
+    CodePart.Visible = True
+    ItemIndex = -1
+    ParentColor = False
+    DropCount = 8
+    DropWidth = 200
+    Color = clBtnFace
+    DropAlign = balRight
+    ReadOnly = False
+    TabOrder = 9
+    ActiveColor = 14811135
+    Frame = flBottom
+    ShortCut = 0
+    _Duplciate = False
+    DictCash = True
+    _Data = ''
+  end
+  object TDSUniversalEdit1: TDSUniversalEdit
+    Left = 155
+    Top = 449
+    Width = 121
+    Height = 19
+    Ctl3D = False
+    ParentCtl3D = False
+    TabOrder = 10
+    Caption.Alignment = taLeftJustify
+    Caption.Font.Charset = DEFAULT_CHARSET
+    Caption.Font.Color = clWindowText
+    Caption.Font.Height = -11
+    Caption.Font.Name = 'Tahoma'
+    Caption.Font.Style = [fsBold]
+    Caption.Caption = 'TDSUniversalEdit'
+    Caption.Width = 96
+    Caption.Height = 13
+    Caption.Position = lpLeft
+    Caption.Visible = True
+    Caption.ParentFont = False
+    Caption.WordWrap = False
+    EditStyle = esCustom
+    Frame = flBottom
+    TrimChar = ' '
+    Decimal = 0
+    _IsDBComponent = False
+    Color = clBtnFace
+    ShortCut = 0
+    _Duplciate = False
+  end
+end

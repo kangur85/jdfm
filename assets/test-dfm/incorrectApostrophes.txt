@@ -1,0 +1,68 @@
+object Form2: TForm2
+    Left = 357
+    Top = 239
+    BorderStyle = bsDialog
+    Caption = 'O programie'
+    ClientHeight = 183
+    ClientWidth = 294
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    OldCreateOrder = False
+    PixelsPerInch = 96
+    TextHeight = 13
+    object Panel1: TPanel
+      Left = 14
+      Top = 8
+      Width = 275
+      Height = 129
+      BevelOuter = bvLowered
+      TabOrder = 0
+      object Label1: TLabel
+        Left = 98
+        Top = 24
+        Width = 78
+        Height = 27
+        Caption = 'Notatnik+'
+        Font.Charset = EASTEUROPE_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -23
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 79
+        Top = 80
+        Width = 25
+        Height = 13
+        Caption = 'Autor'
+      end
+      object Label5: TLabel
+        Left = 98
+        Top = 96
+        Width = 79
+        Height = 16
+        Caption = 'Pawe'#322'' G'#243'rski'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+    object Button1: TButton
+      Left = 87
+      Top = 144
+      Width = 121
+      Height = 30
+      Caption = 'OK'
+      Default = True
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+  end
