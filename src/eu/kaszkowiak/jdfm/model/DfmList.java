@@ -21,39 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package eu.kaszkowiak.jdfm.model;
 
 import eu.kaszkowiak.jdfm.utils.TextUtils;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
  * @author Krzysztof
  */
-public class DfmItemList {
-    
-    ArrayList<DfmItem> items = new ArrayList();
-    
-    public void add(DfmItem item) {
-        items.add(item);
-    }
-    
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("<");
-        
-        for (int i=0; i < items.size(); i++) {
-            if (i == 0) {
-                sb.append("\n");
-            }
-            sb.append(TextUtils.indent(items.get(i).toString(), true));
-            if (i < items.size()-1) {
-                sb.append("\n");
-            }
-        }
-        sb.append(">");
-        return sb.toString();
-    }
-    
+public class DfmList {
+   private LinkedList<String> elems = new LinkedList();
+   
+   public void addElem(String elem) {
+       elems.add(elem);
+   }
+   
+   @Override
+   public String toString() {
+       StringBuilder sb = new StringBuilder("(\n");
+       for (int i = 0; i < elems.size(); i++) {
+           sb.append(TextUtils.indent(elems.get(i), true));
+           if (i < elems.size()-1) {
+               sb.append("\n");
+           }
+       }
+       sb.append(")");
+       return sb.toString();
+   }
 }

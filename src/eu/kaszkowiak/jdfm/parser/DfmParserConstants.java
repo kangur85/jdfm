@@ -36,46 +36,46 @@ public interface DfmParserConstants {
   /** RegularExpression Id. */
   int STRING_SQ = 4;
   /** RegularExpression Id. */
-  int PARENS = 7;
+  int BRACKETS = 7;
   /** RegularExpression Id. */
-  int BRACKETS = 10;
+  int WHITESPACE = 8;
   /** RegularExpression Id. */
-  int HEX_DATA = 13;
+  int OBJECT = 9;
   /** RegularExpression Id. */
-  int WHITESPACE = 14;
+  int ITEM = 10;
   /** RegularExpression Id. */
-  int OBJECT = 15;
+  int END = 11;
   /** RegularExpression Id. */
-  int ITEM = 16;
+  int IDENTIFIER = 12;
   /** RegularExpression Id. */
-  int END = 17;
+  int HASH_STRING = 13;
   /** RegularExpression Id. */
-  int IDENTIFIER = 18;
+  int ENDLINE = 14;
   /** RegularExpression Id. */
-  int HASH_STRING = 19;
+  int EQUAL = 15;
   /** RegularExpression Id. */
-  int ENDLINE = 20;
+  int COLON = 16;
   /** RegularExpression Id. */
-  int EQUAL = 21;
+  int CROC_PAREN_L = 17;
   /** RegularExpression Id. */
-  int COLON = 22;
+  int CROC_PAREN_R = 18;
   /** RegularExpression Id. */
-  int CROC_PAREN_L = 23;
+  int PAREN_L = 19;
   /** RegularExpression Id. */
-  int CROC_PAREN_R = 24;
+  int PAREN_R = 20;
   /** RegularExpression Id. */
-  int PLUS_SIGN = 25;
+  int CURLY_BRACKET_L = 21;
+  /** RegularExpression Id. */
+  int CURLY_BRACKET_R = 22;
+  /** RegularExpression Id. */
+  int PLUS_SIGN = 23;
 
   /** Lexical state. */
   int DEFAULT = 0;
   /** Lexical state. */
   int IN_STRING_SQ = 1;
   /** Lexical state. */
-  int IN_PARENS = 2;
-  /** Lexical state. */
-  int IN_BRACKETS = 3;
-  /** Lexical state. */
-  int IN_HEX_DATA = 4;
+  int IN_BRACKETS = 2;
 
   /** Literal token values. */
   String[] tokenImage = {
@@ -84,15 +84,9 @@ public interface DfmParserConstants {
     "<token of kind 2>",
     "<token of kind 3>",
     "\"\\\'\"",
-    "\"(\"",
-    "<token of kind 6>",
-    "\")\"",
     "\"[\"",
-    "<token of kind 9>",
+    "<token of kind 6>",
     "\"]\"",
-    "\"{\"",
-    "<token of kind 12>",
-    "\"}\"",
     "<WHITESPACE>",
     "\"object\"",
     "\"item\"",
@@ -104,6 +98,10 @@ public interface DfmParserConstants {
     "\":\"",
     "\"<\"",
     "\">\"",
+    "\"(\"",
+    "\")\"",
+    "\"{\"",
+    "\"}\"",
     "\"+\"",
   };
 

@@ -23,6 +23,7 @@
  */
 package eu.kaszkowiak.jdfm.model;
 
+import eu.kaszkowiak.jdfm.utils.TextUtils;
 import javax.xml.bind.DatatypeConverter;
 
 /**
@@ -46,8 +47,7 @@ public class DfmByteArray extends DfmProperty {
         int len = hexString.length();
         for (int i = 0; i < len; i += LINE_LENGTH_IN_BYTES*2) {
             result
-              .append("      ")
-              .append(hexString.substring(i, Math.min(len, i + LINE_LENGTH_IN_BYTES*2)).toUpperCase());
+              .append(TextUtils.indent(hexString.substring(i, Math.min(len, i + LINE_LENGTH_IN_BYTES*2)).toUpperCase(), true));
             
             if (i < hexString.length() - LINE_LENGTH_IN_BYTES*2 - 1) {
                 result.append("\n");

@@ -24,6 +24,8 @@
 
 package eu.kaszkowiak.jdfm.model;
 
+import eu.kaszkowiak.jdfm.utils.TextUtils;
+
 /**
  *
  * @author Krzysztof Kaszkowiak

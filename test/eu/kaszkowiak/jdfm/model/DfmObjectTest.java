@@ -23,6 +23,7 @@
  */
 package eu.kaszkowiak.jdfm.model;
 
+import com.sun.org.apache.xml.internal.utils.StringComparable;
 import eu.kaszkowiak.jdfm.mocks.DfmMockStringFactory;
 import eu.kaszkowiak.jdfm.parser.DfmParser;
 import eu.kaszkowiak.jdfm.parser.ParseException;
@@ -30,10 +31,6 @@ import junit.framework.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- *
- * @author Krzysztof
- */
 public class DfmObjectTest {
     
     public DfmObjectTest() {
@@ -80,6 +77,7 @@ public class DfmObjectTest {
         String expectedResult = DfmMockStringFactory.getComplexDfmWithGlyphAndItems();
         DfmParser parser = new DfmParser(expectedResult);
         DfmObject result = parser.parse();
+        System.out.println(result.toString());
         Assert.assertEquals(result.toString(), expectedResult);
     }    
 }

@@ -22,38 +22,23 @@
  * THE SOFTWARE.
  */
 
-package eu.kaszkowiak.jdfm.model;
-
-import eu.kaszkowiak.jdfm.utils.TextUtils;
-import java.util.ArrayList;
+package eu.kaszkowiak.jdfm.utils;
 
 /**
  *
  * @author Krzysztof
  */
-public class DfmItemList {
-    
-    ArrayList<DfmItem> items = new ArrayList();
-    
-    public void add(DfmItem item) {
-        items.add(item);
+public class TextUtils {
+     
+    private static String indentation(int howMany) {
+        if ( howMany > 0 )
+            return String.format("%1$" + howMany + "s", " ");
+        else
+            return "";
     }
     
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("<");
-        
-        for (int i=0; i < items.size(); i++) {
-            if (i == 0) {
-                sb.append("\n");
-            }
-            sb.append(TextUtils.indent(items.get(i).toString(), true));
-            if (i < items.size()-1) {
-                sb.append("\n");
-            }
-        }
-        sb.append(">");
-        return sb.toString();
+    public static String indent(String text, boolean isFirstToo) {
+        return (isFirstToo ? indentation(DfmConstants.INDENT_WIDTH) : "" ) 
+                + text.replaceAll("\n", "\n"+indentation(DfmConstants.INDENT_WIDTH));
     }
-    
 }
