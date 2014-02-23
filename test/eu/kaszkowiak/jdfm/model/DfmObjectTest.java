@@ -76,8 +76,7 @@ public class DfmObjectTest {
     public void testToStringCorrectGlyphDataLongFile() throws Exception {
         String expectedResult = DfmMockStringFactory.getComplexDfmWithGlyphAndItems();
         DfmParser parser = new DfmParser(expectedResult);
-        DfmObject result = parser.parse();
-        System.out.println(result.toString());
+        DfmObject result = parser.parse();        
         Assert.assertEquals(result.toString(), expectedResult);
     }    
 }
