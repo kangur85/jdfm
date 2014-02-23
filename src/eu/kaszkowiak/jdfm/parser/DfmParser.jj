@@ -59,9 +59,9 @@ MORE : { < "[" >  : IN_BRACKETS }
 <IN_BRACKETS> MORE : { < ~["]"] >  }
 <IN_BRACKETS> TOKEN : { < BRACKETS : "]" >  : DEFAULT }
 
-MORE : { < "<" >  : IN_CROCODILE_BRACKETS }
-<IN_CROCODILE_BRACKETS> MORE : { < ~[">"] >  }
-<IN_CROCODILE_BRACKETS> TOKEN : { < CROCODILE_BRACKETS : ">" >  : DEFAULT }
+MORE : { < "<" >  : IN_ITEM_LIST }
+<IN_ITEM_LIST> MORE : { < ~[">"] >  }
+<IN_ITEM_LIST> TOKEN : { < ITEM_LIST : ">" >  : DEFAULT }
 
 MORE: { < "{" > : IN_HEX_DATA }
 <IN_HEX_DATA> MORE : { <(["A"-"F", "0"-"9", "\n", " ", "\t"])+>}
@@ -164,9 +164,21 @@ private DfmStringProperty unknownProperty():
     (
           (tStr = <PARENS>)
         | (tStr = <BRACKETS>)
-        | (tStr = <CROCODILE_BRACKETS>)
         | (tStr = <IDENTIFIER>)
     )
+    {
+        res.convertFromString(tStr.image);
+        return res;
+    }
+}
+
+private DfmItemList itemList():
+{
+    Token tStr;
+    DfmStringProperty res = new DfmStringProperty();
+}
+{
+    tStr = <ITEM_LIST>
     {
         res.convertFromString(tStr.image);
         return res;
