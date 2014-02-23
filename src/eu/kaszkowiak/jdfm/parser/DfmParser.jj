@@ -51,17 +51,9 @@ MORE : { < "'" >  : IN_STRING_SQ }
 <IN_STRING_SQ> MORE : { < ~["'"] >  }
 <IN_STRING_SQ> TOKEN : { < STRING_SQ : "'" >  : DEFAULT }
 
-MORE : { < "(" >  : IN_PARENS }
-<IN_PARENS> MORE : { < ~[")"] >  }
-<IN_PARENS> TOKEN : { < PARENS : ")" >  : DEFAULT }
-
 MORE : { < "[" >  : IN_BRACKETS }
 <IN_BRACKETS> MORE : { < ~["]"] >  }
 <IN_BRACKETS> TOKEN : { < BRACKETS : "]" >  : DEFAULT }
-
-MORE: { < "{" > : IN_HEX_DATA }
-<IN_HEX_DATA> MORE : { <(["A"-"F", "0"-"9", "\n", "\r", " ", "\t"])+>}
-<IN_HEX_DATA> TOKEN : { <HEX_DATA : "}"> : DEFAULT }
 
 SKIP :
 {
@@ -80,6 +72,10 @@ TOKEN:
     |   <COLON: ":">
     |   <CROC_PAREN_L: "<">
     |   <CROC_PAREN_R: ">">
+    |   <PAREN_L: "(">
+    |   <PAREN_R: ")">
+    |   <CURLY_BRACKET_L: "{">
+    |   <CURLY_BRACKET_R: "}">
     |   <PLUS_SIGN: "+">
 }
 
@@ -138,6 +134,7 @@ private DfmProperty property():
         (     (propertyValue = dfmString()              )
             | (propertyValue = multiLineString()        )
             | (propertyValue = itemList()               )
+            | (propertyValue = list()                   )
             | (propertyValue = byteArray()              )
             | (propertyValue = unknownPropertyValue()   )
         ) <ENDLINE>
@@ -145,6 +142,36 @@ private DfmProperty property():
             result.setValue(propertyValue);
             return result;
         }
+}
+
+private DfmList list():
+{
+    DfmList res = new DfmList();
+    String listElem;
+}
+{
+    <PAREN_L> <ENDLINE>
+    listElem = listElem() { res.addElem(listElem); }
+    ( <ENDLINE> listElem = listElem() { res.addElem(listElem); } )*
+    <PAREN_R>
+    {
+        return res;
+    }
+}
+
+private String listElem():
+{
+    Token tIdentifier;
+    String res;
+}
+{
+    (
+      tIdentifier = <IDENTIFIER> { res = tIdentifier.image; }
+    | res = dfmString()
+    )
+    {
+        return res;
+    }
 }
 
 private DfmMultiLineString multiLineString():
@@ -167,8 +194,7 @@ private String unknownPropertyValue():
 }
 {
     (
-          (tStr = <PARENS>)
-        | (tStr = <BRACKETS>)
+          (tStr = <BRACKETS>)
         | (tStr = <IDENTIFIER>)
     )
     {
@@ -211,11 +237,15 @@ private DfmByteArray byteArray():
 {
     Token tStr;
     DfmByteArray res = new DfmByteArray();
+    String stringValue = "";
 }
 {
-    tStr = <HEX_DATA>
+    <CURLY_BRACKET_L> <ENDLINE>
+    tStr=<IDENTIFIER> { stringValue = tStr.image; }
+    (<ENDLINE> tStr=<IDENTIFIER> { stringValue += tStr.image; })+
+    <CURLY_BRACKET_R>
     {
-        res.parseString(tStr.image);
+        res.parseString(stringValue);
         return res;
     }
 }

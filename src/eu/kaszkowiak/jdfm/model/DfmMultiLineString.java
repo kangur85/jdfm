@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Krzysztof.
+ * Copyright 2014 Krzysztof Kaszkowiak.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,6 +24,7 @@
 
 package eu.kaszkowiak.jdfm.model;
 
+import eu.kaszkowiak.jdfm.utils.TextUtils;
 import java.util.LinkedList;
 
 /**
@@ -35,5 +36,17 @@ public class DfmMultiLineString {
     
     public void addLine(String line) {
         lines.add(line);
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < lines.size(); i++) {
+            sb.append("\n").append(TextUtils.indent(lines.get(i), true));
+            if (i < lines.size()-1) {
+                sb.append(" +");
+            }
+        }
+        return sb.toString();
     }
 }

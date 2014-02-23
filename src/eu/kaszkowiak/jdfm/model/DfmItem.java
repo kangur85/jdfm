@@ -23,6 +23,7 @@
  */
 package eu.kaszkowiak.jdfm.model;
 
+import eu.kaszkowiak.jdfm.utils.TextUtils;
 import java.util.ArrayList;
 
 public class DfmItem {
@@ -46,5 +47,16 @@ public class DfmItem {
         this.properties = properties;
     }
     
-    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("item\n");
+        for (int i = 0; i < properties.size(); i++) {
+            sb.append(TextUtils.indent(properties.get(i).toString(), true));
+            if (i < properties.size()-1) {
+                sb.append("\n");
+            }
+        }
+        sb.append("\nend");
+        return sb.toString();
+    }
 }
