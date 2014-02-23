@@ -39,6 +39,14 @@ public class DfmObject {
     private ArrayList<DfmProperty> properties;
     private ArrayList<DfmObject> children;
 
+    public ArrayList<DfmProperty> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(ArrayList<DfmProperty> properties) {
+        this.properties = properties;
+    }
+
     public DfmObject() {
         properties = new ArrayList();
         children = new ArrayList();
@@ -71,27 +79,6 @@ public class DfmObject {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * @return the value
-     */
-    public String getValue() {
-        return getType();
-    }
-
-    /**
-     * @param value the value to set
-     */
-    public void setValue(String value) {
-        this.setType(value);
-    }
-
-    /**
-     * @return the properties
-     */
-    public List<DfmProperty> getProperties() {
-        return properties;
     }
 
     /**

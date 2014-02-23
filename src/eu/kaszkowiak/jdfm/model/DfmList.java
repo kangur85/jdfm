@@ -32,6 +32,14 @@ import java.util.LinkedList;
  */
 public class DfmList {
    private LinkedList<String> elems = new LinkedList();
+
+    public LinkedList<String> getElems() {
+        return elems;
+    }
+
+    public void setElems(LinkedList<String> elems) {
+        this.elems = elems;
+    }
    
    public void addElem(String elem) {
        elems.add(elem);

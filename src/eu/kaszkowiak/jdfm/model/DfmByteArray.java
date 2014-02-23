@@ -30,11 +30,11 @@ import javax.xml.bind.DatatypeConverter;
  *
  * @author Krzysztof Kaszkowiak
  */
-public class DfmByteArray extends DfmProperty {
+public class DfmByteArray {
     
     private final int LINE_LENGTH_IN_BYTES = 32;
     
-    private byte[] value;
+    private byte[] bytes;
     
     public DfmByteArray() { }
 
@@ -42,7 +42,7 @@ public class DfmByteArray extends DfmProperty {
     public String toString() {
         StringBuilder result = new StringBuilder("{\n");
 
-        String hexString = DatatypeConverter.printHexBinary(value);
+        String hexString = DatatypeConverter.printHexBinary(getBytes());
 
         int len = hexString.length();
         for (int i = 0; i < len; i += LINE_LENGTH_IN_BYTES*2) {
@@ -60,7 +60,21 @@ public class DfmByteArray extends DfmProperty {
     }
 
     public void parseString(String stringValue) {
-        value = DatatypeConverter.parseHexBinary(stringValue);
+        setBytes(DatatypeConverter.parseHexBinary(stringValue));
+    }
+
+    /**
+     * @return the bytes
+     */
+    public byte[] getBytes() {
+        return bytes;
+    }
+
+    /**
+     * @param bytes the bytes to set
+     */
+    public void setBytes(byte[] bytes) {
+        this.bytes = bytes;
     }
     
 }
