@@ -29,23 +29,17 @@ import javax.xml.bind.DatatypeConverter;
  *
  * @author Krzysztof Kaszkowiak
  */
-public class DfmByteArrayProperty extends DfmProperty {
-    
+public class DfmByteArray extends DfmProperty {
     
     private final int LINE_LENGTH_IN_BYTES = 32;
     
     private byte[] value;
     
-    public DfmByteArrayProperty(String name, String valueStringRepresentation) {
-        super(name, valueStringRepresentation);
-    }
-    
-    public DfmByteArrayProperty() { }
+    public DfmByteArray() { }
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder(getName())
-                                    .append(" = {\n");
+        StringBuilder result = new StringBuilder("{\n");
 
         String hexString = DatatypeConverter.printHexBinary(value);
 
@@ -65,9 +59,8 @@ public class DfmByteArrayProperty extends DfmProperty {
         return result.toString();
     }
 
-    @Override
-    public void convertFromString(String stringValue) {
-        stringValue = stringValue.replaceAll("( |\t|\n|\\{|\\})", "");
+    public void parseString(String stringValue) {
+        stringValue = stringValue.replaceAll("( |\t|\n|\r|\\{|\\})", "");
         value = DatatypeConverter.parseHexBinary(stringValue);
     }
     

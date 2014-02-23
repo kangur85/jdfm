@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Krzysztof Kaszkowiak.
+ * Copyright 2014 Krzysztof.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,36 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package eu.kaszkowiak.jdfm.model;
+
+import java.util.LinkedList;
 
 /**
  *
  * @author Krzysztof
  */
-public class DfmStringProperty extends DfmProperty {
-
-    private String value;
+public class DfmMultiLineString {
+    private LinkedList<String> lines = new LinkedList();
     
-    public DfmStringProperty(String name, String valueStringRepresentation) {
-        super(name, valueStringRepresentation);
-    }
-    
-    public DfmStringProperty() { }
-
-    @Override
-    public String toString() {
-        return getName() + " = " + getValue();
-    }
-
-    @Override
-    public void convertFromString(String stringValue) {
-        value = stringValue;
-    }
-
-    /**
-     * @return the value
-     */
-    public String getValue() {
-        return value;
+    public void addLine(String line) {
+        lines.add(line);
     }
 }

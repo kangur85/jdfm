@@ -59,12 +59,8 @@ MORE : { < "[" >  : IN_BRACKETS }
 <IN_BRACKETS> MORE : { < ~["]"] >  }
 <IN_BRACKETS> TOKEN : { < BRACKETS : "]" >  : DEFAULT }
 
-MORE : { < "<" >  : IN_ITEM_LIST }
-<IN_ITEM_LIST> MORE : { < ~[">"] >  }
-<IN_ITEM_LIST> TOKEN : { < ITEM_LIST : ">" >  : DEFAULT }
-
 MORE: { < "{" > : IN_HEX_DATA }
-<IN_HEX_DATA> MORE : { <(["A"-"F", "0"-"9", "\n", " ", "\t"])+>}
+<IN_HEX_DATA> MORE : { <(["A"-"F", "0"-"9", "\n", "\r", " ", "\t"])+>}
 <IN_HEX_DATA> TOKEN : { <HEX_DATA : "}"> : DEFAULT }
 
 SKIP :
@@ -74,13 +70,17 @@ SKIP :
 
 TOKEN:
 {
-        <EQUAL: "=">
-    |   <COLON: ":">
+        <OBJECT: "object">
+    |   <ITEM: "item">
     |   <END: "end">
-    |   <OBJECT: "object">
-    |   <ENDLINE: (["\r", "\n"])+>
     |   <IDENTIFIER : (["A"-"Z", "0"-"9", "a"-"z", "_", ".", "-"])+ >
     |   <HASH_STRING : ("#" (["0"-"9"])+)+>
+    |   <ENDLINE: (["\r", "\n"])+>
+    |   <EQUAL: "=">
+    |   <COLON: ":">
+    |   <CROC_PAREN_L: "<">
+    |   <CROC_PAREN_R: ">">
+    |   <PLUS_SIGN: "+">
 }
 
 DfmObject parse():
@@ -99,66 +99,71 @@ private DfmObject dfmObject():
     DfmObject res = new DfmObject();
     DfmProperty prop;
     DfmObject obj;
-    String name;
-    String type;
+    Token tName;
+    Token tType;
 }
 {
     <OBJECT>
-        name=identifier() { res.setName( name ); } <COLON>
-        type=type()       { res.setType( type ); }
+    tName = <IDENTIFIER>  { res.setName(tName.image); }
+    <COLON>
+    tType = <IDENTIFIER>  { res.setType(tType.image); }
     <ENDLINE>
-        (     (obj=dfmObject()   { res.addChild(obj);     } <ENDLINE>)
-            | (prop=property()   { res.addProperty(prop); } )
-        )+
+    (prop = property()    { res.addProperty(prop); } )*
+    ( obj = dfmObject()   { res.addChild(obj);     } (<ENDLINE>)*)*
     <END>
     { return res; }
 }
 
-private String identifier():
+private DfmItem item():
 {
-    Token tStr;
+    DfmItem res = new DfmItem();
+    DfmProperty prop;
 }
 {
-    tStr = <IDENTIFIER>
-    {
-        return tStr.image;
-    }
-
-}
-
-private String type():
-{
-    Token tStr;
-}
-{
-    tStr = <IDENTIFIER>
-    {
-        return tStr.image;
-    }
-
+    <ITEM> <ENDLINE>
+    (prop = property()    { res.addProperty(prop); } )+
+    <END>
+    { return res; }
 }
 
 private DfmProperty property():
 {
-    String propertyName;
-    DfmProperty res;
+    Token tProperty;
+    Object propertyValue;
+    DfmProperty result = new DfmProperty();
 }
 {
-    propertyName = identifier() <EQUAL>
-        (     (res = stringProperty()    )
-            | (res = unknownProperty()   )
-            | (res = byteArrayProperty() )
+    tProperty = <IDENTIFIER> { result.setName(tProperty.image); }
+    <EQUAL>
+        (     (propertyValue = dfmString()              )
+            | (propertyValue = multiLineString()        )
+            | (propertyValue = itemList()               )
+            | (propertyValue = byteArray()              )
+            | (propertyValue = unknownPropertyValue()   )
         ) <ENDLINE>
         {
-            res.setName(propertyName);
-            return res;
+            result.setValue(propertyValue);
+            return result;
         }
 }
 
-private DfmStringProperty unknownProperty():
+private DfmMultiLineString multiLineString():
+{
+    DfmMultiLineString res = new DfmMultiLineString();
+    String line;
+}
+{
+    <ENDLINE>
+    line = dfmString() { res.addLine(line); }
+    ( <PLUS_SIGN> <ENDLINE> line = dfmString() { res.addLine(line); })*
+    {
+        return res;
+    }
+}
+
+private String unknownPropertyValue():
 {
     Token tStr;
-    DfmStringProperty res = new DfmStringProperty();
 }
 {
     (
@@ -167,28 +172,29 @@ private DfmStringProperty unknownProperty():
         | (tStr = <IDENTIFIER>)
     )
     {
-        res.convertFromString(tStr.image);
-        return res;
+        return tStr.image;
     }
 }
 
 private DfmItemList itemList():
 {
-    Token tStr;
-    DfmStringProperty res = new DfmStringProperty();
+    DfmItemList result = new DfmItemList();
+    DfmItem dfmItem;
 }
 {
-    tStr = <ITEM_LIST>
+    <CROC_PAREN_L>
+    ( <ENDLINE>
+      dfmItem = item() { result.add(dfmItem); }
+    )*
+    <CROC_PAREN_R>
     {
-        res.convertFromString(tStr.image);
-        return res;
+        return result;
     }
 }
 
-private DfmStringProperty stringProperty():
+private String dfmString():
 {
     Token tStr;
-    DfmStringProperty res = new DfmStringProperty();
     String resValue = "";
 }
 {
@@ -197,20 +203,19 @@ private DfmStringProperty stringProperty():
           | (tStr = <HASH_STRING>)
     ){ resValue += tStr.image; })+
     {
-        res.convertFromString(resValue);
-        return res;
+        return resValue;
     }
 }
 
-private DfmByteArrayProperty byteArrayProperty():
+private DfmByteArray byteArray():
 {
     Token tStr;
-    DfmByteArrayProperty res = new DfmByteArrayProperty();
+    DfmByteArray res = new DfmByteArray();
 }
 {
     tStr = <HEX_DATA>
     {
-        res.convertFromString(tStr.image);
+        res.parseString(tStr.image);
         return res;
     }
 }

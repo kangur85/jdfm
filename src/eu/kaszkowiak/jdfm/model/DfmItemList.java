@@ -24,37 +24,30 @@
 
 package eu.kaszkowiak.jdfm.model;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Krzysztof Kaszkowiak
+ * @author Krzysztof
  */
-public class DfmProperty {
+public class DfmItemList {
     
-    private String name;
+    ArrayList<DfmItem> items = new ArrayList();
     
-    private Object value;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void add(DfmItem item) {
+        items.add(item);
     }
     
     @Override
     public String toString() {
-        return getName() + " = " + getValue();
+        StringBuilder sb = new StringBuilder("<\n");
+        for (int i = 0; i < items.size(); i++) {
+            sb.append(items.get(i).toString());
+            if (i < items.size()-1) {
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
     }
     
-    public DfmProperty() {}
-    
-    public Object getValue() {
-        return value;
-    }
-
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
- }
+}
