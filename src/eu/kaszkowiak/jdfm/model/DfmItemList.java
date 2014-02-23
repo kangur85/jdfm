@@ -34,6 +34,14 @@ import java.util.ArrayList;
 public class DfmItemList {
     
     ArrayList<DfmItem> items = new ArrayList();
+
+    public ArrayList<DfmItem> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<DfmItem> items) {
+        this.items = items;
+    }
     
     public void add(DfmItem item) {
         items.add(item);

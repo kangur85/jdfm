@@ -33,6 +33,14 @@ import java.util.LinkedList;
  */
 public class DfmMultiLineString {
     private LinkedList<String> lines = new LinkedList();
+
+    public LinkedList<String> getLines() {
+        return lines;
+    }
+
+    public void setLines(LinkedList<String> lines) {
+        this.lines = lines;
+    }
     
     public void addLine(String line) {
         lines.add(line);

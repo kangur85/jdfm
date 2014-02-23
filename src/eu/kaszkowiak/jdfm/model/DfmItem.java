@@ -30,7 +30,7 @@ public class DfmItem {
     private ArrayList<DfmProperty> properties = new ArrayList();
     
     public void addProperty(DfmProperty property) {
-        properties.add(property);
+        getProperties().add(property);
     }
 
     /**
@@ -50,9 +50,9 @@ public class DfmItem {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("item\n");
-        for (int i = 0; i < properties.size(); i++) {
-            sb.append(TextUtils.indent(properties.get(i).toString(), true));
-            if (i < properties.size()-1) {
+        for (int i = 0; i < getProperties().size(); i++) {
+            sb.append(TextUtils.indent(getProperties().get(i).toString(), true));
+            if (i < getProperties().size()-1) {
                 sb.append("\n");
             }
         }
