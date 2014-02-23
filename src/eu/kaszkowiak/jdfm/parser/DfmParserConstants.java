@@ -40,25 +40,31 @@ public interface DfmParserConstants {
   /** RegularExpression Id. */
   int BRACKETS = 10;
   /** RegularExpression Id. */
-  int CROCODILE_BRACKETS = 13;
+  int HEX_DATA = 13;
   /** RegularExpression Id. */
-  int HEX_DATA = 16;
+  int WHITESPACE = 14;
   /** RegularExpression Id. */
-  int WHITESPACE = 17;
+  int OBJECT = 15;
   /** RegularExpression Id. */
-  int EQUAL = 18;
+  int ITEM = 16;
   /** RegularExpression Id. */
-  int COLON = 19;
+  int END = 17;
   /** RegularExpression Id. */
-  int END = 20;
+  int IDENTIFIER = 18;
   /** RegularExpression Id. */
-  int OBJECT = 21;
+  int HASH_STRING = 19;
   /** RegularExpression Id. */
-  int ENDLINE = 22;
+  int ENDLINE = 20;
   /** RegularExpression Id. */
-  int IDENTIFIER = 23;
+  int EQUAL = 21;
   /** RegularExpression Id. */
-  int HASH_STRING = 24;
+  int COLON = 22;
+  /** RegularExpression Id. */
+  int CROC_PAREN_L = 23;
+  /** RegularExpression Id. */
+  int CROC_PAREN_R = 24;
+  /** RegularExpression Id. */
+  int PLUS_SIGN = 25;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -69,9 +75,7 @@ public interface DfmParserConstants {
   /** Lexical state. */
   int IN_BRACKETS = 3;
   /** Lexical state. */
-  int IN_CROCODILE_BRACKETS = 4;
-  /** Lexical state. */
-  int IN_HEX_DATA = 5;
+  int IN_HEX_DATA = 4;
 
   /** Literal token values. */
   String[] tokenImage = {
@@ -86,20 +90,21 @@ public interface DfmParserConstants {
     "\"[\"",
     "<token of kind 9>",
     "\"]\"",
-    "\"<\"",
-    "<token of kind 12>",
-    "\">\"",
     "\"{\"",
-    "<token of kind 15>",
+    "<token of kind 12>",
     "\"}\"",
     "<WHITESPACE>",
-    "\"=\"",
-    "\":\"",
-    "\"end\"",
     "\"object\"",
-    "<ENDLINE>",
+    "\"item\"",
+    "\"end\"",
     "<IDENTIFIER>",
     "<HASH_STRING>",
+    "<ENDLINE>",
+    "\"=\"",
+    "\":\"",
+    "\"<\"",
+    "\">\"",
+    "\"+\"",
   };
 
 }

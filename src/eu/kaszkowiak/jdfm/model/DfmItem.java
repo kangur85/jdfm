@@ -21,40 +21,30 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package eu.kaszkowiak.jdfm.model;
 
-/**
- *
- * @author Krzysztof Kaszkowiak
- */
-public class DfmProperty {
-    
-    private String name;
-    
-    private Object value;
+import java.util.ArrayList;
 
-    public String getName() {
-        return name;
+public class DfmItem {
+    private ArrayList<DfmProperty> properties = new ArrayList();
+    
+    public void addProperty(DfmProperty property) {
+        properties.add(property);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    @Override
-    public String toString() {
-        return getName() + " = " + getValue();
-    }
-    
-    public DfmProperty() {}
-    
-    public Object getValue() {
-        return value;
+    /**
+     * @return the properties
+     */
+    public ArrayList<DfmProperty> getProperties() {
+        return properties;
     }
 
-    public void setValue(Object value) {
-        this.value = value;
+    /**
+     * @param properties the properties to set
+     */
+    public void setProperties(ArrayList<DfmProperty> properties) {
+        this.properties = properties;
     }
-
- }
+    
+    
+}
