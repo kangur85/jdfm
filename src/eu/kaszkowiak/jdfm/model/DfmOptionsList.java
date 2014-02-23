@@ -23,44 +23,44 @@
  */
 package eu.kaszkowiak.jdfm.model;
 
-import eu.kaszkowiak.jdfm.utils.TextUtils;
-import javax.xml.bind.DatatypeConverter;
+import java.util.ArrayList;
 
 /**
  *
- * @author Krzysztof Kaszkowiak
+ * @author Krzysztof
  */
-public class DfmByteArray extends DfmProperty {
+public class DfmOptionsList {
+    private ArrayList<String> options = new ArrayList();
     
-    private final int LINE_LENGTH_IN_BYTES = 32;
+    public void addOption(String option) {
+        getOptions().add(option);
+    }
     
-    private byte[] value;
-    
-    public DfmByteArray() { }
-
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder("{\n");
-
-        String hexString = DatatypeConverter.printHexBinary(value);
-
-        int len = hexString.length();
-        for (int i = 0; i < len; i += LINE_LENGTH_IN_BYTES*2) {
-            result
-              .append(TextUtils.indent(hexString.substring(i, Math.min(len, i + LINE_LENGTH_IN_BYTES*2)).toUpperCase(), true));
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < getOptions().size(); i++) {
+            sb.append(getOptions().get(i));
             
-            if (i < hexString.length() - LINE_LENGTH_IN_BYTES*2 - 1) {
-                result.append("\n");
+            if (i < getOptions().size()-1) {
+                sb.append(", ");
             }
-            
         }
-        result.append("}");
-        
-        return result.toString();
+        sb.append("]");
+        return sb.toString();
     }
 
-    public void parseString(String stringValue) {
-        value = DatatypeConverter.parseHexBinary(stringValue);
+    /**
+     * @return the options
+     */
+    public ArrayList<String> getOptions() {
+        return options;
     }
-    
+
+    /**
+     * @param options the options to set
+     */
+    public void setOptions(ArrayList<String> options) {
+        this.options = options;
+    }
 }

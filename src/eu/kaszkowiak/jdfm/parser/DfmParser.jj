@@ -51,10 +51,6 @@ MORE : { < "'" >  : IN_STRING_SQ }
 <IN_STRING_SQ> MORE : { < ~["'"] >  }
 <IN_STRING_SQ> TOKEN : { < STRING_SQ : "'" >  : DEFAULT }
 
-MORE : { < "[" >  : IN_BRACKETS }
-<IN_BRACKETS> MORE : { < ~["]"] >  }
-<IN_BRACKETS> TOKEN : { < BRACKETS : "]" >  : DEFAULT }
-
 SKIP :
 {
     <WHITESPACE :  ([" ", "\t"])+>
@@ -76,7 +72,10 @@ TOKEN:
     |   <PAREN_R: ")">
     |   <CURLY_BRACKET_L: "{">
     |   <CURLY_BRACKET_R: "}">
+    |   <BRACKET_L: "[">
+    |   <BRACKET_R: "]">
     |   <PLUS_SIGN: "+">
+    |   <COMMA: ",">
 }
 
 DfmObject parse():
@@ -134,9 +133,10 @@ private DfmProperty property():
         (     (propertyValue = dfmString()              )
             | (propertyValue = multiLineString()        )
             | (propertyValue = itemList()               )
+            | (propertyValue = optionsList()            )
             | (propertyValue = list()                   )
             | (propertyValue = byteArray()              )
-            | (propertyValue = unknownPropertyValue()   )
+            | (propertyValue = simpleValue()            )
         ) <ENDLINE>
         {
             result.setValue(propertyValue);
@@ -188,14 +188,32 @@ private DfmMultiLineString multiLineString():
     }
 }
 
-private String unknownPropertyValue():
+private DfmOptionsList optionsList():
+{
+    DfmOptionsList res = new DfmOptionsList();
+    String option;
+}
+{
+    (
+        <BRACKET_L>
+            (
+                option = listElem() { res.addOption(option); }
+                (<COMMA> option = listElem() { res.addOption(option); })*
+            )?
+        <BRACKET_R>
+    )
+    {
+        return res;
+    }
+}
+
+private String simpleValue():
 {
     Token tStr;
 }
 {
     (
-          (tStr = <BRACKETS>)
-        | (tStr = <IDENTIFIER>)
+        tStr = <IDENTIFIER>
     )
     {
         return tStr.image;

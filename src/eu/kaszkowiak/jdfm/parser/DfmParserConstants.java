@@ -36,46 +36,48 @@ public interface DfmParserConstants {
   /** RegularExpression Id. */
   int STRING_SQ = 4;
   /** RegularExpression Id. */
-  int BRACKETS = 7;
+  int WHITESPACE = 5;
   /** RegularExpression Id. */
-  int WHITESPACE = 8;
+  int OBJECT = 6;
   /** RegularExpression Id. */
-  int OBJECT = 9;
+  int ITEM = 7;
   /** RegularExpression Id. */
-  int ITEM = 10;
+  int END = 8;
   /** RegularExpression Id. */
-  int END = 11;
+  int IDENTIFIER = 9;
   /** RegularExpression Id. */
-  int IDENTIFIER = 12;
+  int HASH_STRING = 10;
   /** RegularExpression Id. */
-  int HASH_STRING = 13;
+  int ENDLINE = 11;
   /** RegularExpression Id. */
-  int ENDLINE = 14;
+  int EQUAL = 12;
   /** RegularExpression Id. */
-  int EQUAL = 15;
+  int COLON = 13;
   /** RegularExpression Id. */
-  int COLON = 16;
+  int CROC_PAREN_L = 14;
   /** RegularExpression Id. */
-  int CROC_PAREN_L = 17;
+  int CROC_PAREN_R = 15;
   /** RegularExpression Id. */
-  int CROC_PAREN_R = 18;
+  int PAREN_L = 16;
   /** RegularExpression Id. */
-  int PAREN_L = 19;
+  int PAREN_R = 17;
   /** RegularExpression Id. */
-  int PAREN_R = 20;
+  int CURLY_BRACKET_L = 18;
   /** RegularExpression Id. */
-  int CURLY_BRACKET_L = 21;
+  int CURLY_BRACKET_R = 19;
   /** RegularExpression Id. */
-  int CURLY_BRACKET_R = 22;
+  int BRACKET_L = 20;
   /** RegularExpression Id. */
-  int PLUS_SIGN = 23;
+  int BRACKET_R = 21;
+  /** RegularExpression Id. */
+  int PLUS_SIGN = 22;
+  /** RegularExpression Id. */
+  int COMMA = 23;
 
   /** Lexical state. */
   int DEFAULT = 0;
   /** Lexical state. */
   int IN_STRING_SQ = 1;
-  /** Lexical state. */
-  int IN_BRACKETS = 2;
 
   /** Literal token values. */
   String[] tokenImage = {
@@ -84,9 +86,6 @@ public interface DfmParserConstants {
     "<token of kind 2>",
     "<token of kind 3>",
     "\"\\\'\"",
-    "\"[\"",
-    "<token of kind 6>",
-    "\"]\"",
     "<WHITESPACE>",
     "\"object\"",
     "\"item\"",
@@ -102,7 +101,10 @@ public interface DfmParserConstants {
     "\")\"",
     "\"{\"",
     "\"}\"",
+    "\"[\"",
+    "\"]\"",
     "\"+\"",
+    "\",\"",
   };
 
 }
